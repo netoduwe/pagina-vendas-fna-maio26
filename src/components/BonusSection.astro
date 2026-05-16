@@ -7,14 +7,15 @@ const bonusList = [
   { title: "Workshop Dieta Mediterrânea", value: "R$ 197,00", desc: "Como aplicar o padrão alimentar mais estudado do mundo na prática clínica de emagrecimento." },
   { title: "Curso Suplementação Baseada em Evidências", value: "R$ 247,00", desc: "O guia definitivo de suplementação para hipertrofia, performance e emagrecimento." },
   { title: "2 Anos de Acesso à Plataforma", value: "R$ 997,00", desc: "O dobro do tempo padrão para você estudar, revisar e aplicar tudo com total tranquilidade." },
-  { title: "1 Ano de Agentes de IA", value: "R$ 597,00", desc: "Acesso completo à Biblioteca de 11 Agentes de IA com curadoria clínica especializada." }
+  { title: "1 Ano de Agentes de IA", value: "R$ 597,00", desc: "Acesso completo à Biblioteca de 11 Agentes de IA com curadoria clínica especializada." },
+  { title: "Desafio Agenda Cheia", value: "R$ 497,00", desc: "Quatro encontros focados em transformar 1 paciente em 3, gerar demanda imediata e fechar consultas particulares." }
 ];
 ---
 <section class="bonus-section section-padding" id="bonus">
   <div class="container">
     <div class="section-header">
       <div class="badge badge-gold">PACOTE DE BÔNUS EXCLUSIVOS</div>
-      <h2 class="section-title">MAIS DE <span class="text-gold-glow">R$ 3.826,00 EM BÔNUS</span> INCLUSOS</h2>
+      <h2 class="section-title">MAIS DE <span class="text-gold-glow">R$ 4.323,00 EM BÔNUS</span> INCLUSOS</h2>
       <p class="section-subtitle">
         Ao garantir sua vaga na Turma 8 hoje, você leva todo o ecossistema de aprofundamento do Ney Felipe sem pagar absolutamente nada a mais por isso.
       </p>
@@ -35,7 +36,7 @@ const bonusList = [
 
     <div class="bonus-summary glass-panel">
       <div class="summary-info">
-        <h3>SUBTOTAL EM PRODUTOS COM VALOR COMERCIAL: <span class="text-gold-glow">R$ 5.826,00</span></h3>
+        <h3>SUBTOTAL EM PRODUTOS COM VALOR COMERCIAL: <span class="text-gold-glow">R$ 6.323,00</span></h3>
         <p>E você ainda recebe entregas exclusivas que não são vendidas separadamente: Supervisão Clínica Individual 1 a 1 com o Ney, Grupo VIP de Alunos (600+), Grupo de Estudos (GENAs), Arsenal de Ferramentas e Mentorias ao vivo.</p>
       </div>
       <a href="#oferta" class="btn-shiny btn-gold summary-btn">Garantir pacote completo por R$ 1.597</a>
@@ -61,22 +62,26 @@ const bonusList = [
     color: var(--text-muted);
   }
   .bonus-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
     margin-bottom: 64px;
   }
   .bonus-card {
+    width: calc(33.333% - 22px);
+    min-width: 300px;
+    max-width: 450px;
+    flex-grow: 1;
     padding: 36px 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    border-color: rgba(250, 204, 21, 0.2);
-    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(250, 204, 21, 0.2) !important;
   }
   .bonus-card:hover {
-    border-color: rgba(250, 204, 21, 0.4);
-    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.15);
+    border-color: rgba(250, 204, 21, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.15) !important;
   }
   .bonus-card-header {
     display: flex;
@@ -106,6 +111,7 @@ const bonusList = [
   .bonus-desc {
     color: var(--text-muted);
     font-size: 1rem;
+    line-height: 1.6;
   }
   .bonus-summary {
     padding: 56px 64px;
@@ -113,9 +119,9 @@ const bonusList = [
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    background: linear-gradient(135deg, rgba(250, 204, 21, 0.1), rgba(10, 19, 37, 0.6));
-    border-color: var(--accent-gold);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.1), rgba(10, 19, 37, 0.6)) !important;
+    border-color: var(--accent-gold) !important;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5) !important;
   }
   .summary-info h3 {
     font-size: 2.2rem;
@@ -126,9 +132,15 @@ const bonusList = [
     color: var(--text-muted);
     font-size: 1.05rem;
     max-width: 680px;
+    line-height: 1.6;
   }
   .summary-btn {
     flex-shrink: 0;
+  }
+  @media (max-width: 1024px) {
+    .bonus-card {
+      width: calc(50% - 16px);
+    }
   }
   @media (max-width: 992px) {
     .bonus-summary {
@@ -138,6 +150,11 @@ const bonusList = [
     }
     .summary-info p {
       margin: 0 auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .bonus-card {
+      width: 100%;
     }
   }
 </style>

@@ -12,7 +12,7 @@
 
     <div class="entregas-grid">
       <!-- Entrega 1 -->
-      <div class="entrega-card">
+      <div class="glass-panel entrega-card">
         <div class="entrega-badge">ENTREGA #1</div>
         <h3 class="entrega-title">TODOS OS MEUS MATERIAIS</h3>
         <p class="entrega-desc">
@@ -21,7 +21,7 @@
       </div>
 
       <!-- Entrega 2 -->
-      <div class="entrega-card">
+      <div class="glass-panel entrega-card">
         <div class="entrega-badge">ENTREGA #2</div>
         <h3 class="entrega-title">COMUNIDADE VIP DE ALUNOS</h3>
         <p class="entrega-desc">
@@ -30,7 +30,7 @@
       </div>
 
       <!-- Entrega 3 -->
-      <div class="entrega-card">
+      <div class="glass-panel entrega-card">
         <div class="entrega-badge">ENTREGA #3</div>
         <h3 class="entrega-title">GRUPO DE ESTUDOS (GENA)</h3>
         <p class="entrega-desc">
@@ -39,7 +39,7 @@
       </div>
 
       <!-- Entrega 4 -->
-      <div class="entrega-card">
+      <div class="glass-panel entrega-card">
         <div class="entrega-badge">ENTREGA #4</div>
         <h3 class="entrega-title">MENTORIAS AO VIVO COM HOTSEAT</h3>
         <p class="entrega-desc">
@@ -48,7 +48,7 @@
       </div>
 
       <!-- Entrega 5 (Destaque) -->
-      <div class="entrega-card highlight-card">
+      <div class="glass-panel entrega-card highlight-card">
         <div class="entrega-badge badge-gold">ENTREGA #5 • DIFERENCIAL EXCLUSIVO</div>
         <h3 class="entrega-title">SUPERVISÃO CLÍNICA INDIVIDUAL (1 A 1)</h3>
         <p class="entrega-desc">
@@ -57,7 +57,7 @@
       </div>
 
       <!-- Entrega 6 -->
-      <div class="entrega-card">
+      <div class="glass-panel entrega-card">
         <div class="entrega-badge">ENTREGA #6</div>
         <h3 class="entrega-title">MAIS DE 28 TRILHAS E CURSOS</h3>
         <p class="entrega-desc">
@@ -103,28 +103,21 @@
     align-items: stretch;
   }
   .entrega-card {
-    background: #0F1011; /* Linear surface-1 */
-    border: 1px solid #23252A; /* Linear hairline */
-    border-radius: 16px;
+    border-radius: 24px;
     padding: 40px 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    transition: all 0.3s ease;
-  }
-  .entrega-card:hover {
-    border-color: #34343A; /* Linear hairline-strong */
-    transform: translateY(-2px);
-    background: #141516; /* Linear surface-2 */
   }
   .highlight-card {
-    background: linear-gradient(135deg, #141516, #18191A);
-    border-color: #EAB308; /* Gold accent */
-    box-shadow: 0 10px 30px rgba(234, 179, 8, 0.1);
+    border-color: var(--accent-gold) !important;
+    box-shadow: 0 15px 35px rgba(234, 179, 8, 0.2) !important;
+    background: rgba(250, 204, 21, 0.08) !important;
   }
   .highlight-card:hover {
-    border-color: #FACC15;
-    background: linear-gradient(135deg, #18191A, #1E2022);
+    border-color: #FACC15 !important;
+    background: rgba(250, 204, 21, 0.12) !important;
+    box-shadow: 0 20px 45px rgba(234, 179, 8, 0.3) !important;
   }
   .entrega-badge {
     align-self: flex-start;
@@ -133,16 +126,16 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: #191A1B; /* Linear surface-4 */
+    background: rgba(255, 255, 255, 0.08);
     color: #94A3B8;
     padding: 6px 14px;
     border-radius: 6px;
-    border: 1px solid #23252A;
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
   .badge-gold {
-    background: rgba(234, 179, 8, 0.1);
+    background: rgba(234, 179, 8, 0.15);
     color: #FACC15;
-    border-color: rgba(234, 179, 8, 0.3);
+    border-color: rgba(234, 179, 8, 0.35);
   }
   .entrega-title {
     font-family: var(--font-heading);

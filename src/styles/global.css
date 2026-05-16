@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 
 :root {
-  --bg-primary: #050B14; /* Azul Escuro Ultra Profundo (Quase Preto) */
-  --bg-secondary: #0A1325; /* Azul Noite Profundo */
-  --bg-card: rgba(255, 255, 255, 0.03); /* Glassmorphism Premium Autêntico */
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --bg-primary: #030712; /* Preto Ultra Profundo */
+  --bg-secondary: #0B132B; /* Azul Noite Profundo */
+  --bg-card: rgba(255, 255, 255, 0.03); /* Fundo de Vidro Translúcido */
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
   --accent-blue: #0284C7; /* Sky Blue Premium */
   --accent-blue-hover: #0369A1;
   --accent-glow: #38BDF8;
@@ -12,8 +12,8 @@
   --accent-gold-hover: #EAB308;
   --text-main: #F8FAFC; /* Branco Gelo Prateado */
   --text-muted: #94A3B8; /* Cinza Prateado Suave */
-  --border-color: rgba(255, 255, 255, 0.08); /* Borda Translúcida Elegante */
-  --border-color-hover: rgba(255, 255, 255, 0.2);
+  --border-color: rgba(255, 255, 255, 0.12); /* Borda Translúcida */
+  --border-color-hover: rgba(255, 255, 255, 0.28);
   --font-heading: 'Bebas Neue', sans-serif;
   --font-body: 'Libre Franklin', sans-serif;
 }
@@ -28,10 +28,16 @@ body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-main);
+  /* Fundo espetacular com Glow Orbs intensos e Grid Lines translúcidas para o Glassmorphism refratar com perfeição! */
   background-image: 
-    radial-gradient(at 0% 0%, rgba(2, 132, 199, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(250, 204, 21, 0.05) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(2, 132, 199, 0.08) 0px, transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(2, 132, 199, 0.35) 0%, transparent 35%),
+    radial-gradient(circle at 90% 25%, rgba(250, 204, 21, 0.25) 0%, transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(2, 132, 199, 0.32) 0%, transparent 35%),
+    radial-gradient(circle at 15% 85%, rgba(250, 204, 21, 0.22) 0%, transparent 30%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
@@ -57,24 +63,27 @@ ul {
 
 /* --- TRUE GLASSMORPHISM PREMIUM (Apple VisionOS Style) --- */
 .glass-panel {
-  background: var(--bg-card);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid var(--border-color);
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid var(--border-color) !important;
   border-radius: 24px;
   box-shadow: 
-    0 20px 50px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 1;
 }
 
 .glass-panel:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-color-hover);
+  background: var(--bg-card-hover) !important;
+  border-color: var(--border-color-hover) !important;
   box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 30px 60px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
   transform: translateY(-4px);
+  z-index: 2;
 }
 
 /* Premium Minimalist Buttons */
@@ -89,9 +98,9 @@ ul {
   letter-spacing: 2px;
   color: #ffffff;
   background: linear-gradient(135deg, #0284C7, #0369A1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.3);
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.4);
   cursor: pointer;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -105,15 +114,15 @@ ul {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: all 0.6s ease;
 }
 
 .btn-shiny:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(2, 132, 199, 0.5);
+  box-shadow: 0 20px 40px rgba(2, 132, 199, 0.6);
   background: linear-gradient(135deg, #0369A1, #075985);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .btn-shiny:hover::before {
@@ -136,7 +145,7 @@ ul {
 
 /* Section Containers */
 .container {
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -171,9 +180,9 @@ ul {
   font-size: 1.1rem;
   letter-spacing: 2px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--accent-glow);
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -185,7 +194,7 @@ ul {
   color: var(--accent-gold);
 }
 
-/* --- SVG & TIPOGRAFIA DE LUXO (Substitutos de Emojis) --- */
+/* --- SVG & TIPOGRAFIA DE LUXO --- */
 .icon-box-premium {
   display: flex;
   align-items: center;
@@ -194,7 +203,7 @@ ul {
   height: 48px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--accent-glow);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   flex-shrink: 0;

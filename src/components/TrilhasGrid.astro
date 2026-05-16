@@ -31,7 +31,7 @@ const trilhas = [
       </p>
     </div>
 
-    <div class="trilhas-container glass-panel">
+    <div class="trilhas-desktop trilhas-container glass-panel">
       <div class="trilhas-sidebar">
         {trilhas.map((trilha, index) => (
           <button 
@@ -71,6 +71,37 @@ const trilhas = [
         ))}
       </div>
     </div>
+
+    <div class="trilhas-mobile faq-accordion">
+      {trilhas.map((trilha) => (
+        <div class="glass-panel faq-item trilha-accordion-item">
+          <button class="faq-question trilha-accordion-header" aria-expanded="false" aria-controls={`mobile-trilha-content-${trilha.id}`}>
+            <div class="header-info">
+              <span class="question-text trilha-title">{trilha.title}</span>
+              <span class="trilha-duration-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-inline"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                {trilha.duration}
+              </span>
+            </div>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-answer trilha-accordion-content" id={`mobile-trilha-content-${trilha.id}`}>
+            <div class="content-wrapper">
+              <ul class="aulas-list-mobile">
+                {trilha.aulas.map(aula => (
+                  <li class="aula-item-mobile">
+                    <span class="aula-check">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                    <span class="aula-name">{aula}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 </section>
 
@@ -90,6 +121,29 @@ const trilhas = [
         const targetPanel = document.getElementById(targetId);
         if (targetPanel) {
           targetPanel.classList.add('active');
+        }
+      });
+    });
+
+    const mobileHeaders = document.querySelectorAll('.trilha-accordion-header');
+
+    mobileHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+        const content = header.nextElementSibling;
+        const icon = header.querySelector('.accordion-icon');
+
+        mobileHeaders.forEach(otherHeader => {
+          otherHeader.setAttribute('aria-expanded', 'false');
+          otherHeader.nextElementSibling.style.maxHeight = null;
+          const otherIcon = otherHeader.querySelector('.accordion-icon');
+          if (otherIcon) otherIcon.textContent = '+';
+        });
+
+        if (!isExpanded) {
+          header.setAttribute('aria-expanded', 'true');
+          content.style.maxHeight = content.scrollHeight + "px";
+          if (icon) icon.textContent = '−';
         }
       });
     });
@@ -243,23 +297,84 @@ const trilhas = [
     font-size: 1rem;
     line-height: 1.5;
   }
+  .trilhas-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .trilha-accordion-item {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .trilha-accordion-header {
+    width: 100%;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .trilha-accordion-header:hover {
+    color: var(--accent-glow);
+    background: rgba(255, 255, 255, 0.01);
+  }
+  .header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .trilha-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .trilha-duration-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    background: rgba(250, 204, 21, 0.1);
+    padding: 4px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    align-self: flex-start;
+  }
+  .trilha-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(5, 11, 20, 0.4);
+  }
+  .content-wrapper {
+    padding: 24px 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .aulas-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .aula-item-mobile {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 1rem;
+    color: var(--text-muted);
+  }
   @media (max-width: 992px) {
-    .trilhas-container {
-      grid-template-columns: 1fr;
+    .trilhas-desktop {
+      display: none !important;
     }
-    .trilhas-sidebar {
-      border-right: none;
-      border-bottom: 1px solid var(--border-color);
-      max-height: 280px;
-    }
-    .trilhas-content-area {
-      padding: 36px 24px;
-      max-height: 500px;
-    }
-    .panel-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
+    .trilhas-mobile {
+      display: flex !important;
     }
   }
 </style>

@@ -16,7 +16,8 @@ const dores = [
   { prob: "Quero aprender sobre inflamação", sol: "Vai aprender na trilha de Bases Nutricionais da Inflamação e no manejo de fitoquímicos." },
   { prob: "Quero entender sobre Comportamental", sol: "Vai assistir à trilha completa de Nutrição Comportamental e Psicologia." },
   { prob: "Quero tirar dúvidas diretamente com o Ney", sol: "Vai participar de Mentorias mensais ao vivo no Zoom diretamente comigo." },
-  { prob: "Quero estar num ambiente de Nutricionistas como eu", sol: "Vai participar da nossa comunidade exclusiva (A Tribo) para trocar conhecimento e condutas diariamente." }
+  { prob: "Quero estar num ambiente de Nutricionistas como eu", sol: "Vai participar da nossa comunidade exclusiva (A Tribo) para trocar conhecimento e condutas diariamente." },
+  { prob: "Quero alavancar meu faturamento no consultório", sol: "Acesso ao ecossistema completo da Formação para valorizar sua consulta, atrair pacientes particulares e viver de atendimentos." }
 ];
 ---
 <section class="problema-solucao-section section-padding" id="solucoes">
@@ -79,19 +80,23 @@ const dores = [
     color: var(--text-muted);
   }
   .ps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
   }
   .ps-card {
+    width: calc(33.333% - 22px);
+    min-width: 320px;
+    max-width: 500px;
+    flex-grow: 1;
     padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.02);
   }
   .ps-card:hover {
-    border-color: rgba(56, 189, 248, 0.3);
+    border-color: rgba(56, 189, 248, 0.3) !important;
   }
   .problem-box, .solution-box {
     display: flex;
@@ -153,8 +158,14 @@ const dores = [
     width: 24px;
     height: 24px;
   }
+  @media (max-width: 1024px) {
+    .ps-card {
+      width: calc(50% - 16px);
+    }
+  }
   @media (max-width: 768px) {
     .ps-card {
+      width: 100%;
       padding: 24px;
     }
     .solution-box {
