@@ -14,3 +14,4 @@ O objetivo é apresentar uma proposta de valor irresistível (Ancoragem de R$ 5.
 ## 🚀 Histórico de Mudanças
 - **16/05/2026:** Inicialização do projeto Astro, configuração base (`package.json`, `astro.config.mjs`, `tsconfig.json`) e criação da estrutura modular de componentes e PMP.
 - **16/05/2026 (Parte 2):** Criação e estilização premium de todos os componentes (`Hero`, `Metodologia`, `AgentesIA`, `TrilhasGrid`, `BonusSection`, `PriceCard`, `Testimonials`, `BioNey`, `Faq`). Correção cirúrgica das horas exatas das trilhas (124h totais de vídeo) com base nos dados reais do Excel. Inicialização do repositório Git e push para `https://github.com/netoduwe/pagina-vendas-fna-maio26.git`.
+- **16/05/2026 (Parte 3):** Atualização dos links oficiais de checkout (`https://links.nutrineyfelipe.com/turma-8`) no `PriceCard.astro` e de suporte do WhatsApp (`https://links.nutrineyfelipe.com/suporte-whatsapp`) no `Faq.astro`. Commit e push para o GitHub.
