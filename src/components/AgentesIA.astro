@@ -1,12 +1,47 @@
 ---
 const agentes = [
-  { num: "#1", icon: "🩺", title: "Agente Nutri Clínico", desc: "Seu assistente de I.A para dúvidas gerais de Nutrição e suporte com casos clínicos." },
-  { num: "#2", icon: "📊", title: "Interpretador de Exames", desc: "Mande os exames dos pacientes e eu vou analisar para você e te ajudar a interpretar com precisão." },
-  { num: "#3", icon: "🥗", title: "Receitas Infinitas", desc: "Receitas baseadas na Metodologia STATUS FUNCIONAL™. Combino Lipídios Bioativos, Fitoquímicos e Probióticos para gerar, em segundos, receitas funcionais de verdade." },
-  { num: "#4", icon: "🔍", title: "Agente Raio-X da Dieta", desc: "Cole o cardápio que você fez e receba uma análise fundamentada na biodisponibilidade dos nutrientes e encontre as carências nutricionais e pontos de melhoria da sua prescrição." },
-  { num: "#5", icon: "💊", title: "Suplementação & Manipulados", desc: "Suplementos com base científica e manipulados exatos para a dieta e individualidade do seu paciente." },
-  { num: "#6", icon: "🎓", title: "Mentor de Recém-Formados", desc: "Se formou agora e tá cheio de dúvidas? Vem cá que eu te ajudo a dar os primeiros passos com segurança!" },
-  { num: "#7", icon: "🚀", title: "Agente de Posicionamento", desc: "Chegou a hora de desvendar esse mistério chamado 'posicionamento' e criar o seu da forma correta. Esse agente vai te guiar através de 7 etapas a construir seu posicionamento, oferta, bio, público-alvo e marketing." }
+  { 
+    num: "#1", 
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>`,
+    title: "Agente Nutri Clínico", 
+    desc: "Seu assistente de I.A para dúvidas gerais de Nutrição e suporte com casos clínicos." 
+  },
+  { 
+    num: "#2", 
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`, 
+    title: "Interpretador de Exames", 
+    desc: "Mande os exames dos pacientes e eu vou analisar para você e te ajudar a interpretar com precisão." 
+  },
+  { 
+    num: "#3", 
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`, 
+    title: "Receitas Infinitas", 
+    desc: "Receitas baseadas na Metodologia STATUS FUNCIONAL™. Combino Lipídios Bioativos, Fitoquímicos e Probióticos para gerar, em segundos, receitas funcionais de verdade." 
+  },
+  { 
+    num: "#4", 
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`, 
+    title: "Agente Raio-X da Dieta", 
+    desc: "Cole o cardápio que você fez e receba uma análise fundamentada na biodisponibilidade dos nutrientes e encontre as carências nutricionais e pontos de melhoria da sua prescrição." 
+  },
+  { 
+    num: "#5", 
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>`, 
+    title: "Suplementação & Manipulados", 
+    desc: "Suplementos com base científica e manipulados exatos para a dieta e individualidade do seu paciente." 
+  },
+  { 
+    num: "#6", 
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`, 
+    title: "Mentor de Recém-Formados", 
+    desc: "Se formou agora e tá cheio de dúvidas? Vem cá que eu te ajudo a dar os primeiros passos com segurança!" 
+  },
+  { 
+    num: "#7", 
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15 3.3 3.3a1 1 0 0 0 1.4 0l7.7-7.7a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0l-7.7 7.7a1 1 0 0 0 0 1.4L15 12"/></svg>`, 
+    title: "Agente de Posicionamento", 
+    desc: "Chegou a hora de desvendar esse mistério chamado 'posicionamento' e criar o seu da forma correta. Esse agente vai te guiar através de 7 etapas a construir seu posicionamento, oferta, bio, público-alvo e marketing." 
+  }
 ];
 ---
 <section class="ia-section section-padding" id="agentes-ia">
@@ -22,10 +57,10 @@ const agentes = [
 
       <div class="agentes-grid">
         {agentes.map(item => (
-          <div class="agente-item">
+          <div class="agente-item glass-panel">
             <div class="agente-header-box">
               <span class="agente-num">{item.num}</span>
-              <div class="agente-icon">{item.icon}</div>
+              <div class="icon-box-premium" set:html={item.svg} />
             </div>
             <div class="agente-info">
               <h4 class="agente-name">{item.title}</h4>
@@ -36,7 +71,9 @@ const agentes = [
       </div>
 
       <div class="prompts-box glass-panel">
-        <div class="prompts-icon">🎁</div>
+        <div class="icon-box-premium icon-box-gold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect width="20" height="5" x="2" y="7" rx="1"/><line x1="12" x2="12" y1="22" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        </div>
         <div class="prompts-content">
           <h3 class="prompts-title">BÔNUS ESPECIAL: +50 PROMPTS DE ALTA CONVERSÃO E GESTÃO</h3>
           <p class="prompts-desc">
@@ -50,14 +87,14 @@ const agentes = [
 
 <style>
   .ia-wrapper {
-    padding: 64px;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(10, 25, 47, 0.95));
-    border-color: rgba(37, 99, 235, 0.3);
+    padding: 72px;
+    background: linear-gradient(135deg, rgba(10, 19, 37, 0.6), rgba(5, 11, 20, 0.8));
+    border-color: rgba(56, 189, 248, 0.2);
   }
   .ia-header {
     text-align: center;
     max-width: 780px;
-    margin: 0 auto 48px auto;
+    margin: 0 auto 56px auto;
   }
   .ia-title {
     font-size: 3.5rem;
@@ -72,22 +109,20 @@ const agentes = [
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
   }
   .agente-item {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 28px;
+    gap: 20px;
+    padding: 32px;
     background: rgba(255, 255, 255, 0.02);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
   .agente-item:hover {
-    background: rgba(37, 99, 235, 0.1);
-    border-color: rgba(37, 99, 235, 0.3);
-    transform: translateY(-4px);
+    background: rgba(56, 189, 248, 0.05);
+    border-color: rgba(56, 189, 248, 0.3);
   }
   .agente-header-box {
     display: flex;
@@ -98,47 +133,41 @@ const agentes = [
     font-family: var(--font-heading);
     font-size: 1.2rem;
     color: var(--accent-gold);
-    background: rgba(245, 158, 11, 0.15);
-    padding: 4px 12px;
+    background: rgba(250, 204, 21, 0.1);
+    padding: 4px 14px;
     border-radius: 20px;
-    border: 1px solid rgba(245, 158, 11, 0.3);
-  }
-  .agente-icon {
-    font-size: 2.2rem;
+    border: 1px solid rgba(250, 204, 21, 0.25);
   }
   .agente-name {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 8px;
     color: var(--text-main);
   }
   .agente-desc {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.6;
   }
   .prompts-box {
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 32px;
-    background: rgba(245, 158, 11, 0.1);
-    border-color: rgba(245, 158, 11, 0.3);
-  }
-  .prompts-icon {
-    font-size: 3rem;
+    gap: 28px;
+    padding: 36px 42px;
+    background: rgba(250, 204, 21, 0.05);
+    border-color: rgba(250, 204, 21, 0.25);
   }
   .prompts-title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: var(--accent-gold);
     margin-bottom: 8px;
   }
   .prompts-desc {
     color: var(--text-main);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
   @media (max-width: 768px) {
     .ia-wrapper {
-      padding: 32px 20px;
+      padding: 36px 24px;
     }
     .ia-title {
       font-size: 2.6rem;
@@ -146,7 +175,7 @@ const agentes = [
     .prompts-box {
       flex-direction: column;
       text-align: center;
-      padding: 24px;
+      padding: 28px;
     }
   }
 </style>

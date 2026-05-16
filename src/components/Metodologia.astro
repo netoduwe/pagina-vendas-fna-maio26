@@ -12,15 +12,19 @@
 
     <div class="metodologia-grid">
       <div class="glass-panel card-metodologia">
-        <div class="card-icon">🧠</div>
+        <div class="icon-box-premium card-icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <h3 class="card-title">Supervisão Clínica Individual</h3>
         <p class="card-desc">
-          Converse diretamente com o Ney Felipe sobre suas demandas mais latentes do consultório em uma sessão 1 a 1 exclusiva. Orientação de quem está no campo de batalha há 17+ anos.
+          Converse diretamente com o Ney Felipe sobre suas demandas mais latentes do consultório em uma sessão 1 a 1 exclusiva. Orientação de quem está no campo de batalha há 19 anos.
         </p>
       </div>
 
       <div class="glass-panel card-metodologia">
-        <div class="card-icon">👥</div>
+        <div class="icon-box-premium card-icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
         <h3 class="card-title">Comunidade Ativa (A Tribo)</h3>
         <p class="card-desc">
           Grupo VIP no WhatsApp com mais de 600 nutricionistas ativos trocando experiências, condutas e apoio diário. Uma verdadeira residência informal.
@@ -28,7 +32,9 @@
       </div>
 
       <div class="glass-panel card-metodologia">
-        <div class="card-icon">🎙️</div>
+        <div class="icon-box-premium card-icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 8-9.04 9.06a2.82 2.82 0 1 0 3.98 3.98L16 12"/><circle cx="17" cy="7" r="5"/></svg>
+        </div>
         <h3 class="card-title">Mentoria Clínica Mensal</h3>
         <p class="card-desc">
           Encontros ao vivo no Zoom com o Ney Felipe para discussão de casos complexos, destravamento de dúvidas e direcionamento estratégico de carreira.
@@ -36,7 +42,9 @@
       </div>
 
       <div class="glass-panel card-metodologia">
-        <div class="card-icon">🔬</div>
+        <div class="icon-box-premium card-icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="M8 10h8"/><path d="M8 14h8"/></svg>
+        </div>
         <h3 class="card-title">GENA (Grupo de Estudos)</h3>
         <p class="card-desc">
           Análise profunda de casos clínicos reais apresentados pelos próprios alunos. Aprenda a conectar exames, sintomas e condutas na prática.
@@ -53,7 +61,7 @@
     margin: 0 auto 64px auto;
   }
   .section-title {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     margin-bottom: 16px;
   }
   .highlight-blue {
@@ -69,33 +77,35 @@
     gap: 32px;
   }
   .card-metodologia {
-    padding: 32px;
+    padding: 36px 32px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02);
   }
-  .card-icon {
-    font-size: 2.5rem;
+  .card-metodologia:hover {
+    border-color: rgba(2, 132, 199, 0.3);
+  }
+  .card-icon-box {
     width: 64px;
     height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(37, 99, 235, 0.15);
-    border-radius: 16px;
-    border: 1px solid rgba(37, 99, 235, 0.3);
+    border-radius: 18px;
+    background: rgba(2, 132, 199, 0.1);
+    border-color: rgba(2, 132, 199, 0.25);
+    color: var(--accent-glow);
   }
   .card-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--text-main);
   }
   .card-desc {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   @media (max-width: 576px) {
     .section-title {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
     }
   }
 </style>

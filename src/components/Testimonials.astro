@@ -57,16 +57,20 @@ const depoimentos = [
     gap: 32px;
   }
   .testimonial-card {
-    padding: 40px 32px;
+    padding: 40px 36px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .testimonial-card:hover {
+    border-color: rgba(2, 132, 199, 0.3);
   }
   .quote-icon {
     font-family: var(--font-heading);
     font-size: 6rem;
-    color: rgba(37, 99, 235, 0.2);
+    color: rgba(2, 132, 199, 0.15);
     position: absolute;
     top: 10px;
     left: 24px;
@@ -76,9 +80,10 @@ const depoimentos = [
   .testimonial-text {
     font-size: 1.05rem;
     color: var(--text-main);
-    margin-bottom: 32px;
+    margin-bottom: 36px;
     position: relative;
     z-index: 1;
+    line-height: 1.6;
   }
   .testimonial-author {
     display: flex;
@@ -89,16 +94,17 @@ const depoimentos = [
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--accent-blue);
+    background: linear-gradient(135deg, #0284C7, #0369A1);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
     font-size: 1.4rem;
     color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   .author-name {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: var(--text-main);
   }
   .author-title {
