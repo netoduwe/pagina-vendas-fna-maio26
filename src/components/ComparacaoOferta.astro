@@ -1,0 +1,188 @@
+---
+---
+<section class="comparacao-section section-padding" id="comparacao">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge">DECISÃO INTELIGENTE</div>
+      <h2 class="section-title">OFERTA NORMAL VS <span class="text-glow highlight-blue">OFERTA IMERSÃO</span></h2>
+      <p class="section-subtitle">
+        Entenda por que garantir sua vaga na Turma 8 durante a Imersão é a decisão mais vantajosa para o seu consultório e para o seu bolso.
+      </p>
+    </div>
+
+    <div class="comparacao-grid">
+      <!-- Card Oferta Normal -->
+      <div class="glass-panel comp-card normal-card">
+        <div class="comp-header">
+          <h3 class="comp-title">OFERTA NORMAL</h3>
+          <span class="comp-price">R$ 2.000,00</span>
+          <span class="comp-sub">Inscrição Padrão da Formação</span>
+        </div>
+        <ul class="comp-list">
+          <li>❌ 1 Ano de Acesso Padrão</li>
+          <li>❌ Agentes de IA (Cobrado à parte: R$ 597)</li>
+          <li>❌ Gravações da Imersão não inclusas</li>
+          <li>❌ Workshops Temáticos não inclusos</li>
+          <li>❌ Sem pacote de ferramentas avulsas</li>
+          <li>✔️ Acesso às 19 Trilhas de Aulas</li>
+          <li>✔️ Suporte na Plataforma</li>
+        </ul>
+      </div>
+
+      <!-- Card Oferta Imersão -->
+      <div class="glass-panel comp-card imersao-card">
+        <div class="badge badge-gold imersao-badge">MELHOR CUSTO-BENEFÍCIO • HOJE</div>
+        <div class="comp-header">
+          <h3 class="comp-title text-gold-glow">OFERTA IMERSÃO</h3>
+          <div class="price-box">
+            <span class="comp-old-price">De R$ 2.000,00 por</span>
+            <span class="comp-new-price">R$ 1.597,00</span>
+          </div>
+          <span class="comp-sub highlight-sub">Economia imediata de R$ 400,00</span>
+        </div>
+        <ul class="comp-list imersao-list">
+          <li>✨ <strong>2 Anos de Acesso</strong> (O dobro de tempo)</li>
+          <li>✨ <strong>1 Ano de Agentes de IA</strong> (7 Especialistas Inclusos)</li>
+          <li>✨ <strong>Gravações Completas da Imersão</strong></li>
+          <li>✨ <strong>Workshops Inclusos</strong> (Saúde da Mulher, Mediterrânea, Suplementação)</li>
+          <li>✨ <strong>Arsenal de Ferramentas do Ney</strong></li>
+          <li>✨ <strong>Acesso às 19 Trilhas de Aulas</strong></li>
+          <li>✨ <strong>Grupo VIP de Alunos (600+) e Mentorias ao Vivo</strong></li>
+        </ul>
+        <div class="comp-cta">
+          <a href="#oferta" class="btn-shiny btn-gold comp-btn">APROVEITAR OFERTA IMERSÃO AGORA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 64px auto;
+  }
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+  .highlight-blue {
+    color: var(--accent-glow);
+  }
+  .section-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .comparacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 32px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .comp-card {
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-radius: 20px;
+  }
+  .normal-card {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.9;
+  }
+  .imersao-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(10, 25, 47, 0.98));
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 50px rgba(245, 158, 11, 0.2);
+    position: relative;
+    transform: scale(1.02);
+    z-index: 2;
+  }
+  .imersao-badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .comp-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 24px;
+  }
+  .comp-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--text-main);
+  }
+  .comp-price {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--text-muted);
+  }
+  .price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .comp-old-price {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+  }
+  .comp-new-price {
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+    line-height: 1;
+  }
+  .comp-sub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .highlight-sub {
+    color: var(--accent-glow);
+    font-weight: 600;
+  }
+  .comp-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+  }
+  .imersao-list li {
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .comp-cta {
+    margin-top: 16px;
+    text-align: center;
+  }
+  .comp-btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.4rem;
+  }
+  @media (max-width: 992px) {
+    .comparacao-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .imersao-card {
+      transform: none;
+    }
+  }
+</style>

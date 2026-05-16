@@ -1,80 +1,38 @@
 ---
+const agentes = [
+  { num: "#1", icon: "🩺", title: "Agente Nutri Clínico", desc: "Seu assistente de I.A para dúvidas gerais de Nutrição e suporte com casos clínicos." },
+  { num: "#2", icon: "📊", title: "Interpretador de Exames", desc: "Mande os exames dos pacientes e eu vou analisar para você e te ajudar a interpretar com precisão." },
+  { num: "#3", icon: "🥗", title: "Receitas Infinitas", desc: "Receitas baseadas na Metodologia STATUS FUNCIONAL™. Combino Lipídios Bioativos, Fitoquímicos e Probióticos para gerar, em segundos, receitas funcionais de verdade." },
+  { num: "#4", icon: "🔍", title: "Agente Raio-X da Dieta", desc: "Cole o cardápio que você fez e receba uma análise fundamentada na biodisponibilidade dos nutrientes e encontre as carências nutricionais e pontos de melhoria da sua prescrição." },
+  { num: "#5", icon: "💊", title: "Suplementação & Manipulados", desc: "Suplementos com base científica e manipulados exatos para a dieta e individualidade do seu paciente." },
+  { num: "#6", icon: "🎓", title: "Mentor de Recém-Formados", desc: "Se formou agora e tá cheio de dúvidas? Vem cá que eu te ajudo a dar os primeiros passos com segurança!" },
+  { num: "#7", icon: "🚀", title: "Agente de Posicionamento", desc: "Chegou a hora de desvendar esse mistério chamado 'posicionamento' e criar o seu da forma correta. Esse agente vai te guiar através de 7 etapas a construir seu posicionamento, oferta, bio, público-alvo e marketing." }
+];
 ---
 <section class="ia-section section-padding" id="agentes-ia">
   <div class="container">
     <div class="ia-wrapper glass-panel">
       <div class="ia-header">
         <div class="badge badge-gold">TECNOLOGIA EXCLUSIVA</div>
-        <h2 class="ia-title">BIBLIOTECA AGENTES DE INTELIGÊNCIA ARTIFICIAL</h2>
+        <h2 class="ia-title">TENHA 7 ESPECIALISTAS DE I.A. À SUA DISPOSIÇÃO</h2>
         <p class="ia-subtitle">
-          O ÚNICO SISTEMA DE I.A. DO BRASIL PARA NUTRICIONISTAS. Não são agentes comuns, são <span class="text-gold-glow">11 agentes com curadoria clínica especializada</span> treinados na metodologia do Ney Felipe.
+          Prontos para pensar, analisar e responder como quem vive o consultório. O único sistema de inteligência artificial do Brasil exclusivo para nutricionistas.
         </p>
       </div>
 
       <div class="agentes-grid">
-        <div class="agente-item">
-          <div class="agente-icon">📊</div>
-          <div class="agente-info">
-            <h4 class="agente-name">Análise de Exames</h4>
-            <p class="agente-desc">Conecta e interpreta marcadores laboratoriais complexos.</p>
+        {agentes.map(item => (
+          <div class="agente-item">
+            <div class="agente-header-box">
+              <span class="agente-num">{item.num}</span>
+              <div class="agente-icon">{item.icon}</div>
+            </div>
+            <div class="agente-info">
+              <h4 class="agente-name">{item.title}</h4>
+              <p class="agente-desc">{item.desc}</p>
+            </div>
           </div>
-        </div>
-
-        <div class="agente-item">
-          <div class="agente-icon">📄</div>
-          <div class="agente-info">
-            <h4 class="agente-name">Análise de Artigos</h4>
-            <p class="agente-desc">Extrai o suprassumo prático da literatura científica.</p>
-          </div>
-        </div>
-
-        <div class="agente-item">
-          <div class="agente-icon">🥗</div>
-          <div class="agente-info">
-            <h4 class="agente-name">Receitas Infinitas</h4>
-            <p class="agente-desc">Cria opções culinárias adaptadas a qualquer restrição.</p>
-          </div>
-        </div>
-
-        <div class="agente-item">
-          <div class="agente-icon">🔍</div>
-          <div class="agente-info">
-            <h4 class="agente-name">Análise de Dieta</h4>
-            <p class="agente-desc">Valida a prescrição e aponta déficits de bioativos.</p>
-          </div>
-        </div>
-
-        <div class="agente-item">
-          <div class="agente-icon">💊</div>
-          <div class="agente-info">
-            <h4 class="agente-name">Guia de Suplementos</h4>
-            <p class="agente-desc">Te educa sobre dosagens, sinergias e evidências.</p>
-          </div>
-        </div>
-
-        <div class="agente-item">
-          <div class="agente-icon">🏥</div>
-          <div class="agente-info">
-            <h4 class="agente-name">Casos Clínicos</h4>
-            <p class="agente-desc">Te auxilia no raciocínio de pacientes desafiadores.</p>
-          </div>
-        </div>
-
-        <div class="agente-item">
-          <div class="agente-icon">🚀</div>
-          <div class="agente-info">
-            <h4 class="agente-name">Marketing & Captação</h4>
-            <p class="agente-desc">Cria linhas editoriais e roteiros de atração de pacientes.</p>
-          </div>
-        </div>
-
-        <div class="agente-item highlight-agente">
-          <div class="agente-icon">⭐</div>
-          <div class="agente-info">
-            <h4 class="agente-name">+4 Agentes Curados</h4>
-            <p class="agente-desc">Assistentes adicionais focados na rotina de excelência.</p>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div class="prompts-box glass-panel">
@@ -110,49 +68,53 @@
     font-size: 1.2rem;
     color: var(--text-muted);
   }
-  .text-gold-glow {
-    color: var(--accent-gold);
-  }
   .agentes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
     margin-bottom: 48px;
   }
   .agente-item {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     gap: 16px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
   }
   .agente-item:hover {
     background: rgba(37, 99, 235, 0.1);
     border-color: rgba(37, 99, 235, 0.3);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
-  .highlight-agente {
-    background: rgba(245, 158, 11, 0.05);
-    border-color: rgba(245, 158, 11, 0.2);
+  .agente-header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .highlight-agente:hover {
+  .agente-num {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-gold);
     background: rgba(245, 158, 11, 0.15);
-    border-color: rgba(245, 158, 11, 0.4);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
   }
   .agente-icon {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .agente-name {
-    font-size: 1.25rem;
-    margin-bottom: 4px;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
     color: var(--text-main);
   }
   .agente-desc {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
+    line-height: 1.5;
   }
   .prompts-box {
     display: flex;

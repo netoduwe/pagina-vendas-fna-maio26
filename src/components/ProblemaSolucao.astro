@@ -1,0 +1,168 @@
+---
+const dores = [
+  { prob: "Não sei analisar & interpretar exames", sol: "1º agente de I.A para nutris do Brasil que te ajuda a analisar e interpretar + trilha teórica completa de Exames Laboratoriais." },
+  { prob: "Tenho insegurança nas minhas consultas", sol: "Metodologia Nutrição Avançada validada para atender com total confiança, segurança e resultados." },
+  { prob: "Não sei quais receitas prescrever", sol: "Você terá um agente que gera receitas infinitas baseadas na Metodologia STATUS FUNCIONAL™." },
+  { prob: "Falta de base técnica sólida", sol: "Vai aprender os Fundamentos da Nutrição, da bioquímica, da comportamental e da esportiva com profundidade." },
+  { prob: "Não sei fazer antropometria", sol: "Vai aprender exatamente como fazer no presencial e no online com exemplos práticos e reais." },
+  { prob: "Não sei periodizar meu acompanhamento", sol: "Vai aprender na Capacitação em Emagrecimento Funcional (CEF) a periodizar seu acompanhamento com embasamento científico." },
+  { prob: "Tenho dúvidas clínicas no dia a dia", sol: "Vai ter uma comunidade de nutris ativos + agente Nutri Clínico + mentorias ao vivo para te auxiliar." },
+  { prob: "Preciso captar pacientes", sol: "Vai ter acesso ao Desafio Agenda Cheia, trilha de marketing, agente de posicionamento e agente de stories." },
+  { prob: "Preciso arrumar meu consultório", sol: "Vai ter acesso ao Desafio de Aceleração onde aprenderá sobre Gestão 360, Efeito Ímã e Atendimento 5 Estrelas." },
+  { prob: "Preciso aprender sobre saúde da mulher", sol: "Vai ter acesso completo ao Workshop Nutrição Clínica Aplicada na Saúde da Mulher." },
+  { prob: "Preciso aprender sobre suplementos", sol: "Vou te ensinar na prática quais suplementos têm real embasamento científico para cada objetivo." },
+  { prob: "Preciso criar meu posicionamento no online", sol: "Nosso Agente de Posicionamento vai te guiar em 7 passos práticos sobre como fazer isso do zero." },
+  { prob: "Quero prescrever a dieta mais saudável do mundo", sol: "Acesso completo ao Workshop Dieta Mediterrânea com ferramentas exclusivas." },
+  { prob: "Quero aprender sobre inflamação", sol: "Vai aprender na trilha de Bases Nutricionais da Inflamação e no manejo de fitoquímicos." },
+  { prob: "Quero entender sobre Comportamental", sol: "Vai assistir à trilha completa de Nutrição Comportamental e Psicologia." },
+  { prob: "Quero tirar dúvidas diretamente com o Ney", sol: "Vai participar de Mentorias mensais ao vivo no Zoom diretamente comigo." },
+  { prob: "Quero estar num ambiente de Nutricionistas como eu", sol: "Vai participar da nossa comunidade exclusiva (A Tribo) para trocar conhecimento e condutas diariamente." }
+];
+---
+<section class="problema-solucao-section section-padding" id="solucoes">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge">IDENTIFIQUE SEU MOMENTO</div>
+      <h2 class="section-title">PARA CADA PROBLEMA DO CONSULTÓRIO, <span class="text-glow highlight-blue">UMA SOLUÇÃO EXATA</span></h2>
+      <p class="section-subtitle">
+        A Formação Nutrição Avançada foi desenhada para eliminar todas as suas travas profissionais. Veja como resolvemos cada um dos seus desafios:
+      </p>
+    </div>
+
+    <div class="ps-grid">
+      {dores.map(item => (
+        <div class="glass-panel ps-card">
+          <div class="problem-box">
+            <div class="ps-icon prob-icon">⚠️</div>
+            <div class="ps-content">
+              <span class="ps-label">SEU PROBLEMA</span>
+              <h4 class="problem-text">"{item.prob}"</h4>
+            </div>
+          </div>
+          <div class="arrow-divider">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="arrow-icon">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+            </svg>
+          </div>
+          <div class="solution-box">
+            <div class="ps-icon sol-icon">✔️</div>
+            <div class="ps-content">
+              <span class="ps-label sol-label">NA FORMAÇÃO VOCÊ TEM</span>
+              <p class="solution-text">{item.sol}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 64px auto;
+  }
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+  .highlight-blue {
+    color: var(--accent-glow);
+  }
+  .section-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .ps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+  .ps-card {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(10, 25, 47, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .ps-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(37, 99, 235, 0.4);
+  }
+  .problem-box, .solution-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .problem-box {
+    padding-bottom: 16px;
+  }
+  .solution-box {
+    padding-top: 16px;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(37, 99, 235, 0.15);
+  }
+  .ps-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .prob-icon {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+  }
+  .sol-icon {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+  }
+  .ps-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ps-label {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #ef4444;
+  }
+  .sol-label {
+    color: #22c55e;
+  }
+  .problem-text {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    font-weight: 600;
+  }
+  .solution-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .arrow-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.2);
+  }
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+  }
+  @media (max-width: 768px) {
+    .ps-card {
+      padding: 20px;
+    }
+  }
+</style>

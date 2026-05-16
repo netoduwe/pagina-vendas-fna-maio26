@@ -1,0 +1,97 @@
+---
+const entregas = [
+  { num: "ENTREGA #1", title: "Todos meus Materiais", desc: "Todo meu arsenal de materiais construídos ao longo de 19 anos de carreira, como fichas de consulta, protocolo de atendimento, antropometria, exames, planilhas, check-lists, meus e-books e muito mais." },
+  { num: "ENTREGA #2", title: "Grupo Privado de Alunos", desc: "Participe do nosso grupo privado com nutricionistas com ideias semelhantes para receber suporte, discutir casos clínicos, estratégias e insights sobre como desenvolver sua carreira na nutrição." },
+  { num: "ENTREGA #3", title: "Acesso Completo a 30 cursos", desc: "Entenda sobre a parte técnica da Nutrição Funcional, Comportamental e Esportiva. Aprenda como captar pacientes, montar estratégias nutricionais, entregar a dieta durante a consulta e acompanhar seus pacientes ao longo do tempo. Mais de 25 cursos temáticos para te ajudar a se tornar uma autoridade nutricional." },
+  { num: "ENTREGA #4", title: "Seja Mentorado", desc: "Receba acesso a mentorias mensais para tirar suas dúvidas diretamente comigo, participar de análises de atendimento e rodadas de hotseats para aprender com a dúvida dos colegas." }
+];
+---
+<section class="entregas-section section-padding" id="entregas">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge badge-gold">O PACOTE COMPLETO</div>
+      <h2 class="section-title">AS <span class="text-gold-glow">4 GRANDES ENTREGAS</span> DA FORMAÇÃO</h2>
+      <p class="section-subtitle">
+        Tudo o que você precisa para sair do zero à autoridade máxima no consultório, reunido em um único ecossistema.
+      </p>
+    </div>
+
+    <div class="entregas-grid">
+      {entregas.map(item => (
+        <div class="glass-panel entrega-card">
+          <div class="entrega-header">
+            <span class="entrega-num">{item.num}</span>
+          </div>
+          <h3 class="entrega-title">{item.title}</h3>
+          <p class="entrega-desc">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 64px auto;
+  }
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+  .text-gold-glow {
+    color: var(--accent-gold);
+  }
+  .section-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .entregas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+  .entrega-card {
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(10, 25, 47, 0.98));
+    border-color: rgba(245, 158, 11, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .entrega-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15);
+    border-color: var(--accent-gold);
+  }
+  .entrega-header {
+    display: flex;
+    align-items: center;
+  }
+  .entrega-num {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+    background: rgba(245, 158, 11, 0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  .entrega-title {
+    font-size: 1.8rem;
+    color: var(--text-main);
+  }
+  .entrega-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .entrega-card {
+      padding: 32px 24px;
+    }
+  }
+</style>
