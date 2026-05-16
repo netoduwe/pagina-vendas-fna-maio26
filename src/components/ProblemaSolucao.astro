@@ -1,68 +1,120 @@
 ---
-const dores = [
-  { prob: "Não sei analisar & interpretar exames", sol: "1º agente de I.A para nutris do Brasil que te ajuda a analisar e interpretar + trilha teórica completa de Exames Laboratoriais." },
-  { prob: "Tenho insegurança nas minhas consultas", sol: "Metodologia Nutrição Avançada validada para atender com total confiança, segurança e resultados." },
-  { prob: "Não sei quais receitas prescrever", sol: "Você terá um agente que gera receitas infinitas baseadas na Metodologia STATUS FUNCIONAL™." },
-  { prob: "Falta de base técnica sólida", sol: "Vai aprender os Fundamentos da Nutrição, da bioquímica, da comportamental e da esportiva com profundidade." },
-  { prob: "Não sei fazer antropometria", sol: "Vai aprender exatamente como fazer no presencial e no online com exemplos práticos e reais." },
-  { prob: "Não sei periodizar meu acompanhamento", sol: "Vai aprender na Capacitação em Emagrecimento Funcional (CEF) a periodizar seu acompanhamento com embasamento científico." },
-  { prob: "Tenho dúvidas clínicas no dia a dia", sol: "Vai ter uma comunidade de nutris ativos + agente Nutri Clínico + mentorias ao vivo para te auxiliar." },
-  { prob: "Preciso captar pacientes", sol: "Vai ter acesso ao Desafio Agenda Cheia, trilha de marketing, agente de posicionamento e agente de stories." },
-  { prob: "Preciso arrumar meu consultório", sol: "Vai ter acesso ao Desafio de Aceleração onde aprenderá sobre Gestão 360, Efeito Ímã e Atendimento 5 Estrelas." },
-  { prob: "Preciso aprender sobre saúde da mulher", sol: "Vai ter acesso completo ao Workshop Nutrição Clínica Aplicada na Saúde da Mulher." },
-  { prob: "Preciso aprender sobre suplementos", sol: "Vou te ensinar na prática quais suplementos têm real embasamento científico para cada objetivo." },
-  { prob: "Preciso criar meu posicionamento no online", sol: "Nosso Agente de Posicionamento vai te guiar em 7 passos práticos sobre como fazer isso do zero." },
-  { prob: "Quero prescrever a dieta mais saudável do mundo", sol: "Acesso completo ao Workshop Dieta Mediterrânea com ferramentas exclusivas." },
-  { prob: "Quero aprender sobre inflamação", sol: "Vai aprender na trilha de Bases Nutricionais da Inflamação e no manejo de fitoquímicos." },
-  { prob: "Quero entender sobre Comportamental", sol: "Vai assistir à trilha completa de Nutrição Comportamental e Psicologia." },
-  { prob: "Quero tirar dúvidas diretamente com o Ney", sol: "Vai participar de Mentorias mensais ao vivo no Zoom diretamente comigo." },
-  { prob: "Quero estar num ambiente de Nutricionistas como eu", sol: "Vai participar da nossa comunidade exclusiva (A Tribo) para trocar conhecimento e condutas diariamente." },
-  { prob: "Quero alavancar meu faturamento no consultório", sol: "Acesso ao ecossistema completo da Formação para valorizar sua consulta, atrair pacientes particulares e viver de atendimentos." }
-];
 ---
-<section class="problema-solucao-section section-padding" id="solucoes">
+<section class="como-funciona-section section-padding" id="como-funciona">
   <div class="container">
     <div class="section-header">
-      <div class="badge">IDENTIFIQUE SEU MOMENTO</div>
-      <h2 class="section-title">PARA CADA PROBLEMA DO CONSULTÓRIO, <span class="text-glow highlight-blue">UMA SOLUÇÃO EXATA</span></h2>
+      <div class="badge">ENTENDA A ESTRUTURA</div>
+      <h2 class="section-title">COMO FUNCIONA A <span class="highlight-cyan">FORMAÇÃO</span></h2>
       <p class="section-subtitle">
-        A Formação Nutrição Avançada foi desenhada para eliminar todas as suas travas profissionais. Veja como resolvemos cada um dos seus desafios:
+        Tudo o que você precisa saber sobre a única formação do Brasil em Nutrição Avançada.
       </p>
     </div>
 
-    <div class="ps-grid">
-      {dores.map(item => (
-        <div class="glass-panel ps-card">
-          <div class="problem-box">
-            <div class="icon-box-premium prob-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="ps-content">
-              <span class="ps-label">SEU PROBLEMA</span>
-              <h4 class="problem-text">"{item.prob}"</h4>
-            </div>
+    <div class="cf-grid">
+      <!-- Card 1 -->
+      <div class="glass-panel cf-card">
+        <div class="card-header">
+          <div class="icon-box-premium cf-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
           </div>
-          <div class="arrow-divider">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="arrow-icon">
-              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-            </svg>
-          </div>
-          <div class="solution-box">
-            <div class="icon-box-premium sol-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div class="ps-content">
-              <span class="ps-label sol-label">NA FORMAÇÃO VOCÊ TEM</span>
-              <p class="solution-text">{item.sol}</p>
-            </div>
-          </div>
+          <h3 class="cf-title">O QUE É ESSA FORMAÇÃO?</h3>
         </div>
-      ))}
+        <div class="cf-body">
+          <p class="cf-desc">
+            Um ambiente seguro para o Nutricionista que deseja viver de atendimentos e desenvolver todas as habilidades que precisa para atuar no consultório.
+          </p>
+          <p class="cf-desc">
+            Tenha acesso a minha <strong>Metodologia e direcionamento</strong> para atender mais e melhor, transformando vidas com a Nutrição (inclusive a sua).
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass-panel cf-card">
+        <div class="card-header">
+          <div class="icon-box-premium cf-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="cf-title">PRA QUEM É?</h3>
+        </div>
+        <div class="cf-body">
+          <ul class="cf-list">
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Para Nutricionistas e estudantes que desejam <strong>viver de atendimentos</strong> praticando uma Nutrição Avançada, baseada em evidências, e que vai <strong>muito além das calorias.</strong></span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Para quem fez Nutrição e nunca atuou com atendimentos.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Para quem quer voltar a atender no consultório.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Para quem tem medo de começar a atender.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Para o estudante que deseja sair da faculdade pronto para a realidade do consultório.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass-panel cf-card">
+        <div class="card-header">
+          <div class="icon-box-premium cf-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <h3 class="cf-title">COMO VAI ME AJUDAR?</h3>
+        </div>
+        <div class="cf-body">
+          <ul class="cf-list">
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Você terá conhecimento e direcionamento para avançar anos na sua profissão em pouco tempo.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Vai eliminar a <strong>insegurança</strong> nos atendimentos.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Vai ter uma <strong>Metodologia validada</strong> que gera resultado e engajamento nos pacientes.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span><strong>Viver Bem da Nutrição</strong> sabendo como captar pacientes, receber mais indicações e fidelizar seus pacientes.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Maximizar os resultados dos pacientes através de estratégias nutricionais da Nutrição Funcional, Esportiva e Comportamental.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span><strong>Evoluir anos de prática clínica</strong> em pouco tempo, sabendo o que fazer e como fazer em cada etapa da consulta e do acompanhamento.</span>
+            </li>
+            <li>
+              <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/check.svg" alt="Check" class="list-check" />
+              <span>Fazer parte de uma tribo de Nutricionistas acima da média e ser valorizado e reconhecido financeiramente.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
+  .como-funciona-section {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: var(--color-bg-secondary);
+  }
   .section-header {
     text-align: center;
     max-width: 780px;
@@ -71,105 +123,90 @@ const dores = [
   .section-title {
     font-size: 3.5rem;
     margin-bottom: 16px;
+    font-weight: 700;
   }
-  .highlight-blue {
-    color: var(--accent-glow);
+  .highlight-cyan {
+    color: var(--color-accent-cyan);
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
   }
   .section-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-muted);
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
   }
-  .ps-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .cf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
+    align-items: start;
   }
-  .ps-card {
-    width: calc(33.333% - 22px);
-    min-width: 320px;
-    max-width: 500px;
-    flex-grow: 1;
-    padding: 32px;
+  .cf-card {
+    padding: 40px 32px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 24px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.02);
   }
-  .ps-card:hover {
-    border-color: rgba(56, 189, 248, 0.3) !important;
+  .cf-card:hover {
+    border-color: rgba(0, 217, 255, 0.3) !important;
   }
-  .problem-box, .solution-box {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .problem-box {
-    padding-bottom: 16px;
-  }
-  .solution-box {
-    padding-top: 16px;
-    background: rgba(56, 189, 248, 0.04);
-    border-radius: 16px;
-    padding: 24px;
-    border: 1px solid rgba(56, 189, 248, 0.12);
-  }
-  .prob-icon-box {
-    background: rgba(239, 68, 68, 0.08);
-    border-color: rgba(239, 68, 68, 0.25);
-    color: #ef4444;
-  }
-  .sol-icon-box {
-    background: rgba(34, 197, 94, 0.1);
-    border-color: rgba(34, 197, 94, 0.25);
-    color: #22c55e;
-  }
-  .ps-content {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .ps-label {
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
-    letter-spacing: 1.5px;
-    color: #ef4444;
-  }
-  .sol-label {
-    color: #22c55e;
-  }
-  .problem-text {
-    font-size: 1.25rem;
-    color: var(--text-main);
-    font-weight: 600;
-  }
-  .solution-text {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-  .arrow-divider {
+  .card-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 28px;
-    color: rgba(255, 255, 255, 0.15);
+    gap: 16px;
   }
-  .arrow-icon {
-    width: 24px;
-    height: 24px;
+  .cf-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(0, 217, 255, 0.1);
+    border-color: rgba(0, 217, 255, 0.25);
+    color: var(--color-accent-cyan);
+    flex-shrink: 0;
   }
-  @media (max-width: 1024px) {
-    .ps-card {
-      width: calc(50% - 16px);
-    }
+  .cf-title {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+  .cf-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .cf-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+  .cf-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cf-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .list-check {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 3px;
   }
   @media (max-width: 768px) {
-    .ps-card {
-      width: 100%;
-      padding: 24px;
+    .section-title {
+      font-size: 2.6rem;
     }
-    .solution-box {
-      padding: 20px;
+    .cf-card {
+      padding: 32px 24px;
     }
   }
 </style>
