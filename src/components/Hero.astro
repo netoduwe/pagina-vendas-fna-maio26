@@ -27,15 +27,15 @@
     <div class="hero-video-wrapper">
       <div class="glass-panel video-panel">
         <div class="video-container">
-          <!-- Placeholder de vídeo premium -->
-          <div class="video-overlay">
-            <button class="play-btn" aria-label="Assistir vídeo de apresentação">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="play-icon">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </button>
-            <p class="video-label">ASSISTA AO VÍDEO DE APRESENTAÇÃO</p>
-          </div>
+          <iframe 
+            src="https://www.youtube.com/embed/3PIUQGOaDQs?autoplay=0&rel=0&modestbranding=1" 
+            title="Vídeo de Apresentação da Formação Nutrição Avançada" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen 
+            loading="lazy"
+            class="youtube-iframe">
+          </iframe>
         </div>
       </div>
     </div>
@@ -108,42 +108,13 @@
     box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
     border: 1px solid rgba(255, 255, 255, 0.05);
   }
-  .video-overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    z-index: 2;
-  }
-  .play-btn {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    background: var(--accent-blue);
+  .youtube-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border: none;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 35px rgba(2, 132, 199, 0.6);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .play-btn:hover {
-    transform: scale(1.1);
-    background: var(--accent-glow);
-    box-shadow: 0 0 50px var(--accent-glow);
-  }
-  .play-icon {
-    width: 38px;
-    height: 38px;
-    margin-left: 6px;
-  }
-  .video-label {
-    font-family: var(--font-heading);
-    letter-spacing: 2px;
-    font-size: 1.3rem;
-    color: var(--text-main);
   }
   @media (max-width: 992px) {
     .hero-container {
