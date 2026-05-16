@@ -1,0 +1,150 @@
+---
+---
+<section class="hero-section section-padding">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="badge">TURMA 8 • INSCRIÇÕES ABERTAS</div>
+      <h1 class="hero-title">
+        CHEGOU SUA HORA DE <span class="text-glow highlight-blue">VIVER DE ATENDIMENTOS</span> E SE TORNAR UM NUTRICIONISTA AVANÇADO
+      </h1>
+      <p class="hero-subtitle">
+        Tudo o que você precisa para viver de consultório em uma única formação: do raciocínio clínico avançado à captação automática de pacientes.
+      </p>
+      <div class="hero-cta-wrapper">
+        <a href="#oferta" class="btn-shiny hero-btn">QUERO GARANTIR MINHA VAGA AGORA</a>
+        <div class="hero-guarantee">
+          <span>🛡️ Garantia Incondicional de 7 Dias</span>
+          <span>⚡ Acesso Imediato</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-video-wrapper">
+      <div class="glass-panel video-panel">
+        <div class="video-container">
+          <!-- Placeholder de vídeo premium -->
+          <div class="video-overlay">
+            <button class="play-btn" aria-label="Assistir vídeo de apresentação">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="play-icon">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+            <p class="video-label">ASSISTA AO VÍDEO DE APRESENTAÇÃO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    padding-top: 120px;
+    overflow: hidden;
+  }
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: 24px;
+  }
+  .highlight-blue {
+    color: var(--accent-glow);
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 540px;
+  }
+  .hero-btn {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 16px;
+  }
+  .hero-guarantee {
+    display: flex;
+    gap: 24px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .video-panel {
+    padding: 12px;
+    background: rgba(15, 23, 42, 0.6);
+  }
+  .video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+  }
+  .video-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    z-index: 2;
+  }
+  .play-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px var(--accent-blue);
+    transition: all 0.3s ease;
+  }
+  .play-btn:hover {
+    transform: scale(1.1);
+    background: var(--accent-glow);
+    box-shadow: 0 0 40px var(--accent-glow);
+  }
+  .play-icon {
+    width: 36px;
+    height: 36px;
+    margin-left: 4px;
+  }
+  .video-label {
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    color: var(--text-main);
+  }
+  @media (max-width: 992px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 48px;
+    }
+    .hero-subtitle {
+      margin: 0 auto 40px auto;
+    }
+    .hero-guarantee {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 576px) {
+    .hero-title {
+      font-size: 2.8rem;
+    }
+    .hero-guarantee {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+</style>

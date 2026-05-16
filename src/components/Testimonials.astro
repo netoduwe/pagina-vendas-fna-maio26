@@ -1,0 +1,108 @@
+---
+const depoimentos = [
+  { name: "Nair Cristina", title: "4 anos de formada", text: "Me sinto muito mais segura nas abordagens, sei o que fazer em todas as fases com segurança." },
+  { name: "Melissa Pinesso", title: "Aluna & Especialista", text: "Menos calculadora e mais nutricionista, dando um novo significado e brilho nas minhas consultas." },
+  { name: "Nathalia Pantaleão", title: "3 anos de formada", text: "Meus pacientes não retornavam. Hoje meus pacientes indicam meu trabalho com orgulho." },
+  { name: "Berty Song", title: "Recém-formada", text: "Antes eu era muito insegura. Hoje tenho mais pacientes, mais tempo livre e total segurança clínica." }
+];
+---
+<section class="testimonials-section section-padding" id="depoimentos">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge">PROVA SOCIAL</div>
+      <h2 class="section-title">O QUE DIZEM OS <span class="text-glow highlight-blue">NUTRICIONISTAS AVANÇADOS</span></h2>
+      <p class="section-subtitle">
+        Histórias reais de profissionais que eliminaram a insegurança e transformaram seus consultórios com a metodologia do Ney Felipe.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      {depoimentos.map(item => (
+        <div class="glass-panel testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">{item.text}</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">{item.name.charAt(0)}</div>
+            <div class="author-info">
+              <h4 class="author-name">{item.name}</h4>
+              <span class="author-title">{item.title}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 64px auto;
+  }
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+  .highlight-blue {
+    color: var(--accent-glow);
+  }
+  .section-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+  }
+  .testimonial-card {
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .quote-icon {
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    color: rgba(37, 99, 235, 0.2);
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .testimonial-text {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: white;
+  }
+  .author-name {
+    font-size: 1.15rem;
+    color: var(--text-main);
+  }
+  .author-title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+</style>

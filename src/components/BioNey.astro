@@ -1,0 +1,123 @@
+---
+---
+<section class="bio-section section-padding" id="mentor">
+  <div class="container bio-container">
+    <div class="bio-image-wrapper">
+      <div class="glass-panel image-panel">
+        <div class="image-placeholder">
+          <!-- Ney Felipe Avatar / Foto -->
+          <div class="ney-initials">NF</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bio-content">
+      <div class="badge">SEU MENTOR</div>
+      <h2 class="bio-title">NEY FELIPE</h2>
+      <p class="bio-subtitle">Nutricionista Clínico há mais de 17 anos, Mestre e Doutorando.</p>
+      
+      <div class="bio-text">
+        <p>
+          Ney Felipe atua no consultório desde 2007. É Mestre em Biologia Molecular pela Universidade Federal do Paraná (UFPR) e Doutorando em Buenos Aires.
+        </p>
+        <p>
+          Ao longo de sua carreira, já atendeu milhares de pacientes e formou mais de 3.000 nutricionistas no Brasil e no mundo. Sua filosofia "Menos calculadora, mais nutricionista" nasceu da vivência diária no campo de batalha, provando que o sucesso clínico depende de um atendimento humano, seguro e altamente embasado.
+        </p>
+      </div>
+
+      <div class="bio-stats">
+        <div class="stat-item">
+          <span class="stat-number">17+</span>
+          <span class="stat-label">Anos de Consultório</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3.000+</span>
+          <span class="stat-label">Alunos Formados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">600+</span>
+          <span class="stat-label">Membros na Tribo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bio-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .image-panel {
+    padding: 16px;
+    background: rgba(15, 23, 42, 0.6);
+  }
+  .image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(135deg, var(--accent-blue), #0f172a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+  }
+  .ney-initials {
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  .bio-title {
+    font-size: 3.5rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+  }
+  .bio-subtitle {
+    font-size: 1.3rem;
+    color: var(--accent-glow);
+    margin-bottom: 24px;
+  }
+  .bio-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .bio-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--accent-gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  @media (max-width: 992px) {
+    .bio-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 48px;
+    }
+    .bio-stats {
+      text-align: center;
+    }
+  }
+</style>

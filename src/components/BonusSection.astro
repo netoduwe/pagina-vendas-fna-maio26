@@ -1,0 +1,141 @@
+---
+const bonusList = [
+  { title: "Gravação da Imersão", value: "R$ 297,00", desc: "Acesso completo às gravações da Imersão com todas as estratégias e materiais práticos." },
+  { title: "Academia Nutrição Funcional", value: "R$ 997,00", desc: "O acervo completo de aprofundamento em nutrição funcional e prática clínica." },
+  { title: "Me Formei em Nutrição, e Agora?", value: "R$ 297,00", desc: "O guia prático para estruturar seu consultório do zero e dar os primeiros passos com segurança." },
+  { title: "Workshop Saúde da Mulher", value: "R$ 197,00", desc: "Nutrição Clínica Aplicada na Saúde da Mulher: da SOP à endometriose e gestação." },
+  { title: "Workshop Dieta Mediterrânea", value: "R$ 197,00", desc: "Como aplicar o padrão alimentar mais estudado do mundo na prática clínica de emagrecimento." },
+  { title: "Curso Suplementação Baseada em Evidências", value: "R$ 247,00", desc: "O guia definitivo de suplementação para hipertrofia, performance e emagrecimento." },
+  { title: "2 Anos de Acesso à Plataforma", value: "R$ 997,00", desc: "O dobro do tempo padrão para você estudar, revisar e aplicar tudo com total tranquilidade." },
+  { title: "1 Ano de Agentes de IA", value: "R$ 597,00", desc: "Acesso completo à Biblioteca de 11 Agentes de IA com curadoria clínica especializada." }
+];
+---
+<section class="bonus-section section-padding" id="bonus">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge badge-gold">PACOTE DE BÔNUS EXCLUSIVOS</div>
+      <h2 class="section-title">MAIS DE <span class="text-gold-glow">R$ 3.826,00 EM BÔNUS</span> INCLUSOS</h2>
+      <p class="section-subtitle">
+        Ao garantir sua vaga na Turma 8 hoje, você leva todo o ecossistema de aprofundamento do Ney Felipe sem pagar absolutamente nada a mais por isso.
+      </p>
+    </div>
+
+    <div class="bonus-grid">
+      {bonusList.map((bonus, index) => (
+        <div class="glass-panel bonus-card">
+          <div class="bonus-card-header">
+            <span class="bonus-num">BÔNUS #{index + 1}</span>
+            <span class="bonus-value">{bonus.value}</span>
+          </div>
+          <h3 class="bonus-title">{bonus.title}</h3>
+          <p class="bonus-desc">{bonus.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="bonus-summary glass-panel">
+      <div class="summary-info">
+        <h3>SUBTOTAL EM PRODUTOS COM VALOR COMERCIAL: <span class="text-gold-glow">R$ 5.826,00</span></h3>
+        <p>E você ainda recebe entregas exclusivas que não são vendidas separadamente: Supervisão Clínica Individual 1 a 1 com o Ney, Grupo VIP de Alunos (600+), Grupo de Estudos (GENAs), Arsenal de Ferramentas e Mentorias ao vivo.</p>
+      </div>
+      <a href="#oferta" class="btn-shiny btn-gold summary-btn">GARANTIR TUDO ISSO POR R$ 1.597</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 64px auto;
+  }
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+  .text-gold-glow {
+    color: var(--accent-gold);
+  }
+  .section-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+  .bonus-card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-color: rgba(245, 158, 11, 0.2);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95));
+  }
+  .bonus-card:hover {
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 15px 35px 0 rgba(245, 158, 11, 0.15);
+  }
+  .bonus-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bonus-num {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--accent-gold);
+    letter-spacing: 1px;
+    background: rgba(245, 158, 11, 0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .bonus-value {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+  }
+  .bonus-title {
+    font-size: 1.6rem;
+    color: var(--text-main);
+  }
+  .bonus-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .bonus-summary {
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(15, 23, 42, 0.9));
+    border-color: var(--accent-gold);
+  }
+  .summary-info h3 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: var(--text-main);
+  }
+  .summary-info p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 680px;
+  }
+  .summary-btn {
+    flex-shrink: 0;
+  }
+  @media (max-width: 992px) {
+    .bonus-summary {
+      flex-direction: column;
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .summary-info p {
+      margin: 0 auto;
+    }
+  }
+</style>

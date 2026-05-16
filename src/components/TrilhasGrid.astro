@@ -1,0 +1,248 @@
+---
+const trilhas = [
+  { id: 1, title: "1. Metodologia Nutrição Avançada", duration: "1h 51m de vídeo", aulas: ["Metodologia", "Dieta: as 3 variáveis", "Dieta Qualitativa", "Dieta Progressiva", "Dieta Inclusiva", "A Consulta Avançada", "Protocolo AME (Acolha, Manipule, Explique e Empolgue)", "Dados Pessoais do Paciente", "Anamnese", "Recordatório Alimentar", "Antropometria", "Prescrição Dietética", "Prontuário", "Resumo e Exercícios de Fixação", "Acompanhamento Nutricional Avançado", "Soluções Práticas para um Bom Acompanhamento", "Os Períodos Críticos", "Pós-Consulta: um momento estratégico", "Conselhos Finais de Acompanhamento"] },
+  { id: 2, title: "2. Treinamento Dieta na Hora", duration: "6h 38m de vídeo", aulas: ["Comece por Aqui", "Quem ganha com a entrega na hora?", "O que seu paciente vai achar?", "Benefícios para o Nutricionista", "Os 3 elementos para entregar na hora", "O que solicitar antes da consulta", "O que fazer durante a consulta", "O essencial em uma consulta", "Ordem de consulta", "Pós-consulta para fidelizar e captar", "Os 5 Passos para Entregar na Hora", "Protocolo AME (Partes 1 e 2)", "Domine seu software", "Não perca tempo nos elementos acessórios", "Deixe os números por último", "Ofereça um acompanhamento", "Estrutura da Consulta Passo a Passo (Overview, Exercício Prático, Checklist, Lista de Substituição)", "Gravações de Consultas Presenciais (Paciente Homem - Emagrecimento, React da consulta, Paciente Mulher - Hipertrofia, Consulta Edmar Freitas, Como fazer Antropometria)", "Gravações de Consultas Online (Mulher - Hipertrofia e Emagrecimento)", "Os Cálculos da Dieta (Uma nova visão e Como calcular)", "Prescrição Além dos Macros (Como Olhar Além dos Cálculos, Análise do Status Funcional, As 3 Classes de Alimentos Funcionais, Lipídios Bioativos, Fitoquímicos, Pré e Probióticos, Nutrição Além das Calorias)"] },
+  { id: 3, title: "3. Bases da Nutrição Funcional", duration: "4h 49m de vídeo", aulas: ["Nutricionista Funcional: O Nutri do Futuro", "O que um Nutri tem que saber sobre célula?", "Introdução à Nutrição Molecular", "Expressão Gênica", "Nutrigenética", "Nutrigenômica", "Epigenética", "Visão Geral e Conclusão sobre Nutrição Molecular", "Obesidade e Inflamação (Partes 1 e 2)", "Padrões Alimentares", "NAFLD (Esteatose Hepática) e Manejo Dietético", "Alimentos Funcionais: Contexto, Evidências e Classificação", "Lipídios Bioativos, Fitoquímicos e Pré/Probióticos", "Introdução a Peptídeos Bioativos (Conceitos Iniciais, Turnover Proteico, Peptídeos Bioativos nos Alimentos, Quadro Geral e Resumo)"] },
+  { id: 4, title: "4. Alimentopédia", duration: "7h 11m de vídeo", aulas: ["Lipídios Bioativos (Introdução, Azeite de Oliva, Abacate, Oleaginosas, Linhaça e Chia, Peixes, Ômega 6, Ovo, Highlights)", "Fitoquímicos (Introdução Partes 1 e 2, Café, Chocolate, Berries, Uva/Vinho/Suco, Frutas Cítricas, Carotenoides, Pseudofrutos e outros frutos, Brássicas, Condimentos e Temperos, Folhas Verdes, Caqui com Berty Song e Ney Felipe, Highlights)", "Pré e Probióticos (Introdução, Ácidos Graxos de Cadeia Curta - AGCC, Fitoquímicos Prebióticos, Alimentos Fermentados, Aveia, Highlights)"] },
+  { id: 5, title: "5. Capacitação em Emagrecimento Funcional", duration: "12h 55m de vídeo", aulas: ["O Mapa da Capacitação", "Fundamentos do Sobrepeso", "Os 3 Pilares do Emagrecimento Funcional (+ Highlights)", "Os Períodos Críticos do Emagrecimento (+ Highlights)", "Fase Mediterrânea (+ Ferramentas exclusivas: Meditermômetro e Meditermômetro Kids + Highlights)", "Fase Funcional (+ Ferramenta exclusiva: Planilha Frequência Funcional + Highlights)", "Fase Reversa (+ Highlights)", "Perspectivas Futuras"] },
+  { id: 6, title: "6. Playlist Emagrecimento (Convidados)", duration: "6h 57m de vídeo", aulas: ["Dr. Raphael Carvalho: Lipogênese", "Dr. Raphael Carvalho: Descomplicando o Colesterol, HDL e LDL", "Marina Katz: Nutrição Materno-Infantil", "Dr. Marcelo Conrado: Aeróbico e Emagrecimento", "Dra. Tatiany Faria: Medicamentos para Emagrecimento", "Drda. Vanessa Melo: Alimentos e manipulados para celulite", "Esp. Michael Alexandre: Nutrição Comportamental no Emagrecimento", "Me. Dudu Haluch: Fisiologia do Reganho de Peso"] },
+  { id: 7, title: "7. Exames Laboratoriais", duration: "5h 49m de vídeo", aulas: ["Guilherme Goulart: Tecido Sanguíneo Completo", "Jefferson Bitencourt: Exames Aplicados à Nutrição", "Jefferson Bitencourt: Marcadores Inflamatórios - Série Branca e Outros Marcadores", "Leticia Mazepa: Exames Laboratoriais e SOP", "Carlos Eduardo Viterbo: Vitamina D na Prática", "Ney Felipe: Vitamina B12"] },
+  { id: 8, title: "8. Devorando Artigos Científicos", duration: "3h 29m de vídeo", aulas: ["Inflamação e estresse oxidativo na obesidade", "Nutrientes, Mitocôndria e Saúde Perinatal", "Restrição de energia intermitente e preservação de massa magra", "Mecanismos neurológicos dos polifenóis do chá verde no Alzheimer e Parkinson", "Efeitos neuroprotetores do resveratrol no Alzheimer", "Polifenóis e Controle Glicêmico", "Dieta Mediterrânea e Epigenética"] },
+  { id: 9, title: "9. Bases Nutricionais da Inflamação", duration: "43m de vídeo", aulas: ["Apresentação", "Inflamação Crônica x Aguda", "Intestino e Inflamação", "Receptores de Reconhecimento de Padrão (PRRs)", "Receptores de Reconhecimento de Dano (DRRs)", "Estado Nutricional e Inflamação", "Ácidos Graxos Saturados e Inflamação", "Nutrição Anti-inflamatória", "Conclusões"] },
+  { id: 10, title: "10. Prescrição de Fitoquímicos", duration: "1h 03m de vídeo", aulas: ["Polifenóis", "Glicosinolatos e Carotenoides", "Hormese"] },
+  { id: 11, title: "11. Tópicos Avançados em Nutrição Funcional", duration: "2h 07m de vídeo", aulas: ["Mitocôndrias e Turnover Mitocondrial", "Biogênese Mitocondrial e Flexibilidade Metabólica", "Desenhando vias metabólicas", "Fitoquímicos e Biogênese Mitocondrial", "Prescrição para Biogênese Mitocondrial", "Crononutrição", "Nutricosméticos"] },
+  { id: 12, title: "12. Nutrição Comportamental e Psicologia", duration: "2h 01m de vídeo", aulas: ["Introdução à Psicologia e à Psicanálise com Claudia Rietter (História da Psicologia e Abordagens Teóricas, Psicanálise e a Estruturação do Psiquismo, Sintomas Alimentares, Corpo e Imagem, Casos Clínicos)", "Psicologia do Esporte com Carolina Krauss (Psicologia do Esporte, Planos de Metas, Tríade do Cuidado e Longevidade, Saúde da Mulher, Trabalho Interdisciplinar)"] },
+  { id: 13, title: "13. Grupo de Estudos Nutrição Avançada (GENAs)", duration: "68h 23m de vídeo", aulas: ["Filosofia Nutrição Avançada de Atendimento Clínico (Ney Felipe)", "Nutrição e Performance Cognitiva (Rubens Tamehiro)", "Como utilizar o Instagram contra o terrorismo nutricional (Guilherme Bonnes)", "Aeróbio em Jejum (Marcelo Conrado)", "Bodybuilding Night", "Vegetarianismo (Marina Schneppendahl)", "Nutrição Estética e Ferramentas de Avaliação (Vanessa Melo)", "Atleta com Necessidades Especiais (Karol Fogaça)", "Manejo Dietético na Pré-Diabetes (Ana Bail)", "Estratégias de Evolução no Emagrecimento (Camila Zanini)", "Fitoquímicos Night (Vanessa Melo e Alisson David)", "Retocolite Ulcerativa (Eduard Carvalho)", "Diabetes (Juliano Granzotti)", "Nutrição Materno-Infantil (Marina Katz)", "Nutrição e Suplementação do Atleta Adolescente (Rubens e Marina)", "Atendimento e Prescrição para Gestantes (Vanessa, Marina e Camila)", "Nutrição e Sono (Berty Song e Gabriele Rosa)", "Nutrição Esportiva para Corredores (Juliano, Melissa e Luiz Eduardo)", "Deficiência de Ferro: um olhar preventivo (Camila Machado)", "Pacientes Desafiadores (Cássia Helena)", "Antropometria na Prática Clínica (Mel Pinesso, Cassia Maia e Marina Guedes)", "Dieta Gracie (Victor Freitas)", "Psicologia e Alimentação: os sentidos dos transtornos alimentares (Kauê David)", "A influência do ambiente na adesão à dieta (Guilherme Bonnes)", "Progressão Dietética e Microbiota (Jefferson Bittencourt)", "Nutrição nos Esportes de Combate (Rubens Tamehiro)", "Cirurgia Bariátrica (Cassia Helena e Mesa Redonda)", "Transtornos Alimentares (Vanessa Melo e Cássia Helena)", "Preparação para Iron Man (Mel Pinesso)", "Choque Cultural (Berty Song e Marina Guedes)", "Psiquiatria e Nutrição: uma conversa clínica (Moises Thel)", "De CLT a Empreendedor: transição de carreira (Jessica Wszolek)", "Nutrição na Endometriose (Vanessa Melo)", "Estratégias para avançar sua carreira no consultório (Jessica Wszolek)", "A Mulher Atleta (Melissa Pinesso)", "Periodização dietética para praticantes de musculação (Mario Jr.)", "Powerlifting (Breno Chaves)", "Como encaminhar o paciente para a psicoterapia? (Cassia e Teresa)", "Seletividade Alimentar (Tailaine Hoffmann)", "Além da prescrição: Alergia Alimentar (Camilla Campos)", "Inteligência Artificial no consultório (Fábio Sanches)", "Fisiculturismo além dos palcos (Wellington Nescau)", "Diabetes Mellitus 2 (Camila Groff)", "Exames laboratoriais no acompanhamento de análogos de GLP-1 (Rubens Tamehiro)", "Contabilidade e Tributação do Nutricionista (Luciano Stresser)", "Nutrição no Triathlon (Juliano Granzotti)", "Nutrição Esportiva na Natação (Guilherme Zornitta)"] },
+  { id: 14, title: "14. Fundamentos da Bioquímica", duration: "2h 27m de vídeo", aulas: ["Bioenergética", "Metabolismo de Carboidratos (Glicólise, Destinos do Piruvato e Glicogênio)", "Metabolismo de Lipídios (Transporte por Lipoproteínas e Catabolismo)", "Ciclo de Krebs", "Fosforilação Oxidativa", "Metabolismo de Proteínas (Anabolismo e a Via mTOR, Catabolismo e Ciclo da Ureia)", "Integração Metabólica"] },
+  { id: 15, title: "15. Fundamentos da Nutrição", duration: "4h 40m de vídeo", aulas: ["O Nutricionista", "O Paciente", "O Acompanhamento"] },
+  { id: 16, title: "16. Antropometria na Prática", duration: "1h 02m de vídeo", aulas: ["Avaliação da Composição Corporal", "Instrumentos e Calibração", "Pontos Anatômicos de Reference", "Aferindo Dobras Cutâneas", "Aferindo Perímetros Corporais", "Diâmetros Ósseos", "Equações de Composição Corporal", "Índices e Razões", "Da Avaliação à Decisão Clínica"] },
+  { id: 17, title: "17. Desafio Agenda Cheia", duration: "5h 19m de vídeo", aulas: ["1º Encontro: Como transformar 1 paciente em 3", "2º Encontro: Análise e feedback das tarefas + tira-dúvidas", "3º Encontro: Do posicionamento ao fechamento (Como gerar demanda e fechar vendas)", "4º Encontro: Análise de conteúdos, conversas e scripts de venda + tira-dúvidas"] },
+  { id: 18, title: "18. Manychat (Automação Insta)", duration: "23m de vídeo", aulas: ["Introdução", "Setup Insta", "Fluxo Nível 1", "Fluxo Nível 2", "Exemplos de Conteúdo", "Aplicativo Manychat"] },
+  { id: 19, title: "19. Suplementação Esportiva", duration: "17h 34m de vídeo", aulas: ["Introdução e Conceitos", "Níveis de Evidência (Buscando Evidências, Guidelines ISSN, Australian Institute of Sport)", "Suplementos para Hipertrofia (HMB, Aminoácidos Essenciais, BCAA, Proteínas em Pó, Creatina, Ácido Fosfatídico, Tribulus Terrestris, Pirâmide de Evidências)", "Suplementos para Performance (Glicerol, Beta-alanina, Carboidratos em Gel, Isotônicos, Cafeína, Ribose, TCM, Cápsula de Sal, Beterraba, Glutamina, Palatinose, Bicarbonato de Sódio, Pirâmide de Evidências)", "Suplementos para Emagrecimento (L-Carnitina, Chá Verde, Capsaicina, Morosil, Fibras, Multivitamínicos, Pirâmide de Evidências)", "Conclusão e Apostila", "Bônus: GENAs de Nutrição Esportiva (Atletas com Necessidades Especiais, Bodybuilding Night, Aeróbio em Jejum, Nutrição Estética, Dieta Gracie, Corredores, Atleta Adolescente, Iron Man, Esportes de Combate, Powerlifting, Musculação)"] }
+];
+---
+<section class="trilhas-section section-padding" id="trilhas">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge">CONTEÚDO PROGRAMÁTICO</div>
+      <h2 class="section-title">AS <span class="text-glow highlight-blue">19 TRILHAS</span> DE APRENDIZAGEM</h2>
+      <p class="section-subtitle">
+        Uma formação de nível pós-graduação com mais de 124 horas de vídeo puro, estruturada para cobrir 100% dos desafios reais do consultório. Clique nas trilhas abaixo para explorar o conteúdo completo.
+      </p>
+    </div>
+
+    <div class="trilhas-container glass-panel">
+      <div class="trilhas-sidebar">
+        {trilhas.map((trilha, index) => (
+          <button 
+            class={`trilha-tab ${index === 0 ? 'active' : ''}`} 
+            data-target={`trilha-content-${trilha.id}`}
+            aria-label={`Ver conteúdo da ${trilha.title}`}
+          >
+            <span class="trilha-tab-title">{trilha.title}</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="trilhas-content-area">
+        {trilhas.map((trilha, index) => (
+          <div 
+            class={`trilha-content-panel ${index === 0 ? 'active' : ''}`} 
+            id={`trilha-content-${trilha.id}`}
+          >
+            <div class="panel-header">
+              <h3 class="panel-title">{trilha.title}</h3>
+              <span class="panel-duration">⏱️ {trilha.duration}</span>
+            </div>
+            <ul class="aulas-list">
+              {trilha.aulas.map(aula => (
+                <li class="aula-item">
+                  <span class="aula-check">✔️</span>
+                  <span class="aula-name">{aula}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.trilha-tab');
+    const panels = document.querySelectorAll('.trilha-content-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-target');
+
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 64px auto;
+  }
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+  .highlight-blue {
+    color: var(--accent-glow);
+  }
+  .section-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .trilhas-container {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    min-height: 600px;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.85);
+  }
+  .trilhas-sidebar {
+    border-right: 1px solid var(--border-color);
+    background: rgba(10, 25, 47, 0.5);
+    max-height: 700px;
+    overflow-y: auto;
+  }
+  /* Custom Scrollbar for sidebar */
+  .trilhas-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .trilhas-sidebar::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+  }
+  .trilhas-sidebar::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 3px;
+  }
+  .trilha-tab {
+    width: 100%;
+    padding: 20px 24px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .trilha-tab:hover {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--text-main);
+  }
+  .trilha-tab.active {
+    background: rgba(37, 99, 235, 0.2);
+    color: var(--accent-glow);
+    border-left: 4px solid var(--accent-blue);
+    font-weight: 600;
+  }
+  .trilhas-content-area {
+    padding: 48px;
+    max-height: 700px;
+    overflow-y: auto;
+  }
+  .trilhas-content-area::-webkit-scrollbar {
+    width: 6px;
+  }
+  .trilhas-content-area::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+  }
+  .trilhas-content-area::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 3px;
+  }
+  .trilha-content-panel {
+    display: none;
+  }
+  .trilha-content-panel.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .panel-title {
+    font-size: 2.2rem;
+    color: var(--text-main);
+  }
+  .panel-duration {
+    font-size: 1rem;
+    color: var(--accent-gold);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  .aulas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .aula-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .aula-check {
+    color: var(--accent-blue);
+    flex-shrink: 0;
+  }
+  .aula-name {
+    color: var(--text-main);
+    font-size: 0.95rem;
+  }
+  @media (max-width: 992px) {
+    .trilhas-container {
+      grid-template-columns: 1fr;
+    }
+    .trilhas-sidebar {
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+      max-height: 280px;
+    }
+    .trilhas-content-area {
+      padding: 32px 20px;
+      max-height: 500px;
+    }
+    .panel-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+</style>

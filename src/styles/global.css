@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  --bg-primary: #0A192F; /* Azul Escuro Premium */
+  --bg-secondary: #0f172a; /* Azul Escuro de Fundo */
+  --bg-card: rgba(15, 23, 42, 0.75);
+  --bg-card-hover: rgba(30, 41, 59, 0.85);
+  --accent-blue: #2563EB; /* Azul Vibrante */
+  --accent-blue-hover: #1D4ED8;
+  --accent-glow: #60A5FA;
+  --accent-gold: #F59E0B; /* Dourado para Badges/Oferta */
+  --accent-gold-hover: #D97706;
+  --text-main: #F8FAFC; /* Branco Gelo */
+  --text-muted: #94A3B8; /* Cinza Suave */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color-hover: rgba(37, 99, 235, 0.3);
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Libre Franklin', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(15, 23, 42, 0.8) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(37, 99, 235, 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: 0 15px 35px 0 rgba(37, 99, 235, 0.15);
+}
+
+/* Premium Buttons */
+.btn-shiny {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 36px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-hover));
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-shiny::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.6s ease;
+}
+
+.btn-shiny:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
+  background: linear-gradient(135deg, #3B82F6, var(--accent-blue));
+}
+
+.btn-shiny:hover::before {
+  left: 100%;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  color: #000000;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+  background: linear-gradient(135deg, #FBBF24, var(--accent-gold));
+}
+
+/* Section Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 96px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 64px 0;
+  }
+}
+
+/* Glow effects */
+.text-glow {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: var(--accent-glow);
+  margin-bottom: 16px;
+}
+
+.badge-gold {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: var(--accent-gold);
+}

@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Formação Nutrição Avançada (FNA T8) com Ney Felipe. O único sistema de I.A. do Brasil para nutricionistas." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+
+    <!-- Meta Pixel Code -->
+    <script is:inline>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1615234125717646');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1615234125717646&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Chatbase -->
+    <script is:inline>
+      window.embeddedChatbotConfig = {
+        chatbotId: "r-XQvK3KqZ4oK7P9wL2uM",
+        domain: "www.chatbase.co"
+      }
+    </script>
+    <script is:inline src="https://www.chatbase.co/embed.min.js" chatbotId="r-XQvK3KqZ4oK7P9wL2uM" domain="www.chatbase.co" defer></script>
+    <!-- End Chatbase -->
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
