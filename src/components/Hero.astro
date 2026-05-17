@@ -48,15 +48,16 @@
       </div>
     </div>
     <div class="hero-video-wrapper">
-      <div class="glass-panel video-panel">
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/FkYUYm3vwnA?autoplay=0&rel=0&modestbranding=1" 
-            title="Vídeo de Apresentação da Formação Nutrição Avançada" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen 
-            loading="lazy"
+      <!-- Outer stable wrapper to prevent DOM collapse when inner video becomes fixed -->
+      <div class="glass-panel video-panel outer-video-placeholder">
+        <div id="video-wrapper" class="video-wrapper">
+          <button id="close-floating-video" class="close-video-btn" aria-label="Fechar vídeo flutuante">✕</button>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/FkYUYm3vwnA?rel=0&modestbranding=1&playsinline=1"
+            title="Vídeo de Apresentação da Formação Nutrição Avançada"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
             class="youtube-iframe">
           </iframe>
         </div>
@@ -160,31 +161,93 @@
   .svg-subtle {
     color: var(--color-accent-cyan);
   }
-  .video-panel {
+
+  /* Video & Floating Player Styles */
+  .outer-video-placeholder {
     padding: 16px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 32px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    box-sizing: content-box;
   }
-  .video-container {
+
+  .video-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: linear-gradient(135deg, #0A1325, #050B14);
-    border-radius: 20px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 20px;
+    background: #000;
+    z-index: 10;
     box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .youtube-iframe {
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  }
+
+  /* Close Button (Only visible when floating) */
+  .close-video-btn {
+    position: absolute;
+    top: -40px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .close-video-btn:hover {
+    background: var(--color-accent-cyan);
+    color: #02070D;
+    border-color: var(--color-accent-cyan);
+    transform: scale(1.1);
+  }
+
+  /* Floating State */
+  .video-wrapper.floating {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 360px;
+    max-width: calc(100vw - 32px);
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(0, 217, 255, 0.3);
+    z-index: 9999;
+    background: #02070D;
+    animation: float-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .video-wrapper.floating .close-video-btn {
+    top: 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @keyframes float-in {
+    from { transform: translateY(20px) scale(0.95); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
   }
 
   /* Urgency Bar */
@@ -271,6 +334,14 @@
     }
   }
 
+  @media (max-width: 767px) {
+    .video-wrapper.floating {
+      right: 12px;
+      bottom: 12px;
+      width: 260px;
+    }
+  }
+
   @media (max-width: 576px) {
     .hero-title {
       font-size: 2.5rem;
@@ -285,3 +356,35 @@
     }
   }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("video-wrapper");
+  if (!video) return;
+
+  const placeholder = video.closest(".outer-video-placeholder");
+  const closeBtn = document.getElementById("close-floating-video");
+  let isUserClosed = false;
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      isUserClosed = true;
+      video.classList.remove("floating");
+    });
+  }
+
+  window.addEventListener("scroll", function () {
+    if (isUserClosed || !placeholder) return;
+
+    const rect = placeholder.getBoundingClientRect();
+    const triggerPoint = window.scrollY + rect.top + rect.height;
+
+    if (window.scrollY > triggerPoint) {
+      video.classList.add("floating");
+    } else {
+      video.classList.remove("floating");
+    }
+  });
+});
+</script>
