@@ -1,40 +1,108 @@
 ---
 const depoimentos = [
+  // =========== VÍDEOS ===========
+  {
+    type: "video",
+    title: "Fernanda Folle • Nutri há 12 anos",
+    videoUrl: "https://www.youtube-nocookie.com/embed/K1O_x_HiYIo?rel=0&modestbranding=1",
+    desc: "\"Encontrei na Formação um caminho prático para viver de consultório de forma leve e com total segurança nas prescrições.\""
+  },
+  {
+    type: "video",
+    title: "Adriana Guedes • Nutri há 17 anos",
+    videoUrl: "https://www.youtube-nocookie.com/embed/I3q8K-Shdas?rel=0&modestbranding=1",
+    desc: "\"Nenhuma pós-graduação que fiz na vida entrega tudo que a Formação Nutrição Avançada entregou. Incrível.\""
+  },
+  {
+    type: "video",
+    title: "Melissa Pinesso • Nutri & Aluna",
+    videoUrl: "https://www.youtube-nocookie.com/embed/Zhi-YzQCIw8?rel=0&modestbranding=1",
+    desc: "\"Nos primeiros atendimentos após o curso pude me notar menos 'calculadora' e mais nutricionista, dando um novo significado e brilho nas minhas consultas.\""
+  },
+
+  // =========== CITAÇÕES COM AVATAR CIRCULAR ===========
   { 
-    name: "Berty Song", 
+    type: "quote",
+    name: "BERTY SONG", 
     role: "Nutricionista recém-formada", 
     image: "https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-01.png",
     text: "Antes eu era muito insegura. A Nutrição Avançada mudou a minha vida, hoje em dia eu tenho mais pacientes e tenho mais tempo."
   },
   { 
-    name: "Nair Cristina", 
+    type: "quote",
+    name: "NAIR CRISTINA", 
     role: "Nutricionista há 4 anos", 
     image: "https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-02.png",
-    text: "Me sinto muito mais segura nas abordagens, eu pego um paciente e sei o que fazer com ele em todas as fases com total segurança."
+    text: "Me sinto muito mais segura nas abordagens, eu pego um paciente e sei o que fazer com ele em todas as fases com segurança."
   },
   { 
-    name: "Nathalia Pantaleão", 
+    type: "quote",
+    name: "NATHALIA PANTALEÃO", 
     role: "Nutricionista há 3 anos", 
     image: "https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-03.png",
-    text: "Tinha dificuldade para trabalhar com emagrecimento porque os pacientes não retornavam. Aplicava o que aprendi na faculdade, mas não gerava resultados. Hoje meus pacientes indicam meu trabalho!"
+    text: "Tinha uma dificuldade para trabalhar com emagrecimento porque os pacientes não retornavam, eu aplicava tudo que tinha aprendido na faculdade, mas isso não gerava resultados. Hoje meus pacientes indicam meu trabalho."
   },
-  { 
-    name: "João Marcelo", 
-    role: "Aluno FNA", 
-    image: "https://nutrineyfelipe.com/wp-content/uploads/2025/03/formacao-nutricao-avancada-resultados-depoimentos-joao.2.jpg",
-    text: "Queria agradecer a todos que me incentivaram na mentoria a atender a paciente com ovário policístico que eu estava com medo. Acabamos de fechar o acompanhamento trimestral, no pix!"
-  },
-  { 
-    name: "Aluna FNA", 
-    role: "Nutricionista de Consultório", 
-    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/09/print-pacote-1k.jpg",
-    text: "Fechei meu primeiro pacote de acompanhamento de R$ 1.000,00! A segurança clínica e o método da Formação foram essenciais para cobrar o valor justo."
-  },
-  { 
-    name: "Nutricionista Avançada", 
-    role: "Formada no final de 2023", 
+
+  // =========== PRINTS REAIS ===========
+  {
+    type: "print",
+    title: "Nutricionista Recém-Formada",
     image: "https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-nutricao.jpg",
-    text: "Me formei no final de 2023 e tinha muito medo de atender. O investimento na Formação se pagou rapidamente logo no início da minha prática clínica!"
+    desc: "Formada no final de 2023, eliminou o medo de atender e recuperou o investimento da Formação rapidamente."
+  },
+  {
+    type: "print",
+    title: "Resultados de Consultório",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/05/compilado-comprimido.jpg",
+    desc: "Compilado de alunos comemorando resultados reais, alta adesão dos pacientes e faturamento recorde."
+  },
+  {
+    type: "print",
+    title: "Segurança nas Prescrições",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/05/comprimido-site-1.jpg",
+    desc: "Nutricionistas relatando a segurança clínica conquistada para conduzir casos difíceis e fidelizar pacientes."
+  },
+  {
+    type: "print",
+    title: "Evolução na Prática Clínica",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/05/compilado-comprimido-2.jpg",
+    desc: "Alunos compartilhando a evolução no consultório e o impacto das prescrições avançadas no dia a dia."
+  },
+  {
+    type: "print",
+    title: "Comunidade Ativa",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/05/comprimido-site.jpg",
+    desc: "Grupo exclusivo onde nutricionistas trocam experiências e celebram o crescimento contínuo do consultório."
+  },
+  {
+    type: "print",
+    title: "Plano Alimentar na Hora",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-dieta-na-hora.jpg",
+    desc: "Ganhou agilidade e segurança para entregar a dieta na hora, encantando e fidelizando pacientes."
+  },
+  {
+    type: "print",
+    title: "Autoridade e Reconhecimento",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/05/compilado-comprimido-3.jpg",
+    desc: "Mais relatos de alunos que transformaram a insegurança em autoridade e reconhecimento profissional."
+  },
+  {
+    type: "print",
+    title: "Domínio das Ferramentas",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/05/enzo-print.jpg",
+    desc: "Enzo comemorando o domínio das ferramentas e a clareza para aplicar a metodologia na prática diária."
+  },
+  {
+    type: "print",
+    title: "Aluna FNA • Consultório",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2024/09/print-pacote-1k.jpg",
+    desc: "Fechou seu primeiro pacote de acompanhamento de R$ 1.000,00 aplicando a estrutura de valor da Formação."
+  },
+  {
+    type: "print",
+    title: "João Marcelo • Aluno FNA",
+    image: "https://nutrineyfelipe.com/wp-content/uploads/2025/03/formacao-nutricao-avancada-resultados-depoimentos-joao.2.jpg",
+    desc: "Superou a insegurança clínica com casos complexos (SOP) e fechou acompanhamento trimestral à vista no Pix."
   }
 ];
 ---
@@ -85,7 +153,7 @@ const depoimentos = [
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M38.8484 16.236L15 43.5793L78.2688 15L18.1218 71L93 34.1172L70.2047 65.2739"
+            d="M38.8484 16.236L15 43.5793L78.268"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -100,54 +168,85 @@ const depoimentos = [
 
     <!-- Marquee Track -->
     <div class="marquee-wrapper">
-      <!-- Gradient Overlays for smooth edges -->
       <div class="marquee-overlay marquee-overlay-left"></div>
       <div class="marquee-overlay marquee-overlay-right"></div>
 
       <div class="marquee-track">
         <!-- Grupo 1 -->
-        {depoimentos.map((member) => (
-          <div class="testimonial-card group">
+        {depoimentos.map((item) => (
+          <div class={`testimonial-card card-type-${item.type} group`}>
             <div class="card-inner">
-              <div class="image-wrapper">
-                <img
-                  alt={member.name}
-                  class="member-image"
-                  src={member.image}
-                  loading="lazy"
-                />
-                <div class="quote-badge">“</div>
-              </div>
-              <div class="content-wrapper">
-                <p class="member-quote">"{member.text}"</p>
-                <div class="member-info">
-                  <h3 class="member-name">{member.name}</h3>
-                  <p class="member-role">{member.role}</p>
-                </div>
-              </div>
+              {item.type === 'video' && (
+                <>
+                  <div class="slide-video-wrapper">
+                    <iframe src={item.videoUrl} title={item.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                  <div class="slide-content">
+                    <h4 class="slide-title">{item.title}</h4>
+                    <p class="slide-desc">{item.desc}</p>
+                  </div>
+                </>
+              )}
+              {item.type === 'quote' && (
+                <>
+                  <div class="avatar-wrapper">
+                    <img src={item.image} alt={item.name} loading="lazy" />
+                  </div>
+                  <h4 class="quote-author-name">{item.name}</h4>
+                  <p class="quote-author-role">{item.role}</p>
+                  <p class="quote-text">"{item.text}"</p>
+                </>
+              )}
+              {item.type === 'print' && (
+                <>
+                  <div class="slide-img-wrapper">
+                    <img src={item.image} alt={item.title} loading="lazy" />
+                  </div>
+                  <div class="slide-content">
+                    <h4 class="slide-title">{item.title}</h4>
+                    <p class="slide-desc">{item.desc}</p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         ))}
         <!-- Grupo 2 (Clone para Loop Infinito) -->
-        {depoimentos.map((member) => (
-          <div class="testimonial-card group" aria-hidden="true">
+        {depoimentos.map((item) => (
+          <div class={`testimonial-card card-type-${item.type} group`} aria-hidden="true">
             <div class="card-inner">
-              <div class="image-wrapper">
-                <img
-                  alt={member.name}
-                  class="member-image"
-                  src={member.image}
-                  loading="lazy"
-                />
-                <div class="quote-badge">“</div>
-              </div>
-              <div class="content-wrapper">
-                <p class="member-quote">"{member.text}"</p>
-                <div class="member-info">
-                  <h3 class="member-name">{member.name}</h3>
-                  <p class="member-role">{member.role}</p>
-                </div>
-              </div>
+              {item.type === 'video' && (
+                <>
+                  <div class="slide-video-wrapper">
+                    <iframe src={item.videoUrl} title={item.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                  <div class="slide-content">
+                    <h4 class="slide-title">{item.title}</h4>
+                    <p class="slide-desc">{item.desc}</p>
+                  </div>
+                </>
+              )}
+              {item.type === 'quote' && (
+                <>
+                  <div class="avatar-wrapper">
+                    <img src={item.image} alt={item.name} loading="lazy" />
+                  </div>
+                  <h4 class="quote-author-name">{item.name}</h4>
+                  <p class="quote-author-role">{item.role}</p>
+                  <p class="quote-text">"{item.text}"</p>
+                </>
+              )}
+              {item.type === 'print' && (
+                <>
+                  <div class="slide-img-wrapper">
+                    <img src={item.image} alt={item.title} loading="lazy" />
+                  </div>
+                  <div class="slide-content">
+                    <h4 class="slide-title">{item.title}</h4>
+                    <p class="slide-desc">{item.desc}</p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         ))}
@@ -291,7 +390,7 @@ const depoimentos = [
     display: flex;
     gap: 32px;
     width: max-content;
-    animation: marquee-scroll 45s linear infinite;
+    animation: marquee-scroll 60s linear infinite;
     padding: 10px 0;
   }
 
@@ -304,9 +403,9 @@ const depoimentos = [
     to { transform: translateX(calc(-50% - 16px)); }
   }
 
-  /* Testimonial Card */
+  /* Testimonial Card Base */
   .testimonial-card {
-    width: 340px;
+    width: 350px;
     flex-shrink: 0;
   }
 
@@ -320,88 +419,136 @@ const depoimentos = [
     overflow: hidden;
     box-shadow: var(--shadow-medium);
     transition: all var(--motion-medium);
+    justify-content: space-between;
   }
 
-  .card-inner:hover {
+  .testimonial-card:hover .card-inner {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(0, 217, 255, 0.3);
+    border-color: rgba(0, 217, 255, 0.4);
     box-shadow: var(--shadow-heavy);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
   }
 
-  .image-wrapper {
+  /* =========== TIPO 1: VÍDEOS =========== */
+  .slide-video-wrapper {
     position: relative;
     width: 100%;
-    height: 220px;
+    aspect-ratio: 16 / 9;
+    background: #000;
     overflow: hidden;
-    background: #06111D;
   }
 
-  .member-image {
+  .slide-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* =========== TIPO 2: CITAÇÕES COM AVATAR CIRCULAR =========== */
+  .card-type-quote .card-inner {
+    padding: 32px 24px 24px 24px;
+    background: linear-gradient(145deg, #06111D 0%, #02070D 100%);
+    text-align: center;
+    justify-content: flex-start;
+  }
+
+  .avatar-wrapper {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 16px auto;
+    border: 2px solid var(--color-accent-cyan);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    flex-shrink: 0;
+    background: #02070D;
+  }
+
+  .avatar-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease, transform 0.5s ease;
+    object-position: top;
+    display: block;
   }
 
-  .card-inner:hover .member-image {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-  }
-
-  .quote-badge {
-    position: absolute;
-    bottom: 12px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--color-accent-cyan);
-    color: #02070D;
-    font-family: var(--font-heading);
-    font-size: 2rem;
+  .quote-author-name {
+    font-size: 1.25rem;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    box-shadow: 0 8px 16px rgba(0, 217, 255, 0.3);
+    color: var(--color-accent-cyan);
+    margin: 0 0 4px 0;
+    letter-spacing: 0.5px;
   }
 
-  .content-wrapper {
-    padding: 28px 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-    gap: 20px;
+  .quote-author-role {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0 0 20px 0;
   }
 
-  .member-quote {
+  .quote-text {
     font-size: 1.05rem;
     color: var(--color-text-primary);
     line-height: 1.6;
-    font-style: italic;
+    margin: 0;
+    font-weight: 300;
+    text-align: left;
   }
 
-  .member-info {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 16px;
+  /* =========== TIPO 3: PRINTS REAIS =========== */
+  .slide-img-wrapper {
+    width: 100%;
+    height: 340px;
+    background: #02070D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
   }
 
-  .member-name {
-    font-size: 1.3rem;
+  .slide-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .testimonial-card:hover .slide-img-wrapper img {
+    transform: scale(1.05);
+  }
+
+  .slide-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .slide-title {
+    font-size: 1.15rem;
     font-weight: 700;
-    color: var(--color-text-primary);
-    margin-bottom: 4px;
+    color: var(--color-accent-cyan);
+    margin: 0;
+    letter-spacing: -0.3px;
   }
 
-  .member-role {
-    font-size: 0.9rem;
-    color: var(--color-accent-cyan);
-    font-weight: 600;
+  .slide-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
   }
 
   /* Featured Bottom Quote */
