@@ -1,0 +1,304 @@
+---
+---
+<!-- Wrapper com Curtain Reveal (Efeito Cortina Parallax no meio da página) -->
+<div class="cinematic-intermission-wrapper" id="intermission">
+  <div class="cinematic-intermission">
+    
+    <!-- Ambient Light & Grid Background -->
+    <div class="intermission-aurora"></div>
+    <div class="intermission-bg-grid"></div>
+
+    <!-- Giant Background Text -->
+    <div class="intermission-giant-bg-text">SINERGIA</div>
+
+    <!-- 1. Diagonal Sleek Marquee -->
+    <div class="intermission-marquee">
+      <div class="marquee-track">
+        <div class="marquee-items">
+          <span>A I.A. NÃO SUBSTITUI O NUTRICIONISTA</span> <span class="star">✦</span>
+          <span>QUEM USA I.A. SUBSTITUI QUEM NÃO USA</span> <span class="star">✦</span>
+          <span>METODOLOGIA STATUS FUNCIONAL™</span> <span class="star">✦</span>
+          <span>RASTREAMENTO METABÓLICO AVANÇADO</span> <span class="star">✦</span>
+          <span>A I.A. NÃO SUBSTITUI O NUTRICIONISTA</span> <span class="star">✦</span>
+          <span>QUEM USA I.A. SUBSTITUI QUEM NÃO USA</span> <span class="star">✦</span>
+          <span>METODOLOGIA STATUS FUNCIONAL™</span> <span class="star">✦</span>
+          <span>RASTREAMENTO METABÓLICO AVANÇADO</span> <span class="star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Main Center Content -->
+    <div class="intermission-center-content">
+      <div class="badge badge-cyan">O FUTURO DA NUTRIÇÃO</div>
+      <h2 class="intermission-title">A inteligência artificial não substitui o nutricionista.</h2>
+      <p class="intermission-subtitle">
+        Mas o nutricionista que domina a I.A. com maestria clínica e método avançado substituirá todos os outros. Você está pronto para estar no topo?
+      </p>
+
+      <!-- Interactive Glass Pills -->
+      <div class="intermission-pills-group">
+        <a href="https://links.nutrineyfelipe.com/turma-8" class="intermission-glass-pill cta-pill">
+          <span class="cta-arrow">➔</span> DESTRAVAR MEU ACESSO À TURMA 8
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Efeito magnético suave no botão da intermissão
+    const intermissionPills = document.querySelectorAll('.intermission-glass-pill');
+    intermissionPills.forEach(pill => {
+      pill.addEventListener('mousemove', (e) => {
+        const rect = pill.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        pill.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.05)`;
+      });
+      pill.addEventListener('mouseleave', () => {
+        pill.style.transform = `translate(0px, 0px) scale(1)`;
+      });
+    });
+  });
+</script>
+
+<style>
+  /* --- ESTRUTURA DO CURTAIN REVEAL MID-PAGE --- */
+  .cinematic-intermission-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+    z-index: 5;
+  }
+
+  .cinematic-intermission {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background: #02070D;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  /* --- AMBIENT LIGHT & GRID --- */
+  .intermission-aurora {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80vw;
+    height: 60vh;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.18) 0%, rgba(27, 125, 255, 0.12) 40%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    animation: intermission-breathe 8s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+
+  @keyframes intermission-breathe {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+    100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  }
+
+  .intermission-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-size: 60px 60px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* --- GIANT BACKGROUND TEXT --- */
+  .intermission-giant-bg-text {
+    position: absolute;
+    bottom: -5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: 25vw;
+    line-height: 0.75;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.04);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* --- 1. DIAGONAL MARQUEE --- */
+  .intermission-marquee {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(2, 7, 13, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 16px 0;
+    transform: rotate(-2deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    z-index: 10;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: intermission-marquee 35s linear infinite;
+  }
+
+  @keyframes intermission-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .marquee-items {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+  }
+
+  .star {
+    color: var(--accent-cyan);
+    opacity: 0.8;
+  }
+
+  /* --- 2. MAIN CENTER CONTENT --- */
+  .intermission-center-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .badge-cyan {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 8px 16px;
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid rgba(0, 217, 255, 0.28);
+    color: var(--color-accent-cyan);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .intermission-title {
+    font-family: var(--font-heading);
+    font-size: 4.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
+    line-height: 1.1;
+  }
+
+  .intermission-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+
+  /* Glass Pills */
+  .intermission-pills-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .intermission-glass-pill {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 30px -10px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+  }
+
+  .cta-pill {
+    padding: 22px 48px;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    background: linear-gradient(145deg, rgba(0, 217, 255, 0.25) 0%, rgba(27, 125, 255, 0.15) 100%);
+    border-color: rgba(0, 217, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  }
+
+  .cta-pill:hover {
+    background: linear-gradient(145deg, rgba(0, 217, 255, 0.4) 0%, rgba(27, 125, 255, 0.3) 100%);
+    border-color: rgba(0, 217, 255, 0.6);
+    box-shadow: 0 25px 50px rgba(0, 217, 255, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 992px) {
+    .intermission-title {
+      font-size: 3.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intermission-title {
+      font-size: 2.5rem;
+    }
+    .cta-pill {
+      padding: 18px 32px;
+      font-size: 1.3rem;
+      width: 100%;
+    }
+  }
+</style>

@@ -6,6 +6,7 @@ import Metodologia from '../components/Metodologia.astro';
 import GrandesEntregas from '../components/GrandesEntregas.astro';
 import AgentesIA from '../components/AgentesIA.astro';
 import TrilhasGrid from '../components/TrilhasGrid.astro';
+import CinematicIntermission from '../components/CinematicIntermission.astro';
 import BonusSection from '../components/BonusSection.astro';
 import ComparacaoOferta from '../components/ComparacaoOferta.astro';
 import GarantiaSection from '../components/GarantiaSection.astro';
@@ -16,26 +17,36 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Formação Nutrição Avançada (FNA T8) • Ney Felipe">
-  <main class="main-content">
+  <!-- Bloco Superior -->
+  <main class="upper-main content-block">
     <Hero />
     <ProblemaSolucao />
     <Metodologia />
     <GrandesEntregas />
     <AgentesIA />
     <TrilhasGrid />
+  </main>
+
+  <!-- Intermissão Cinematográfica (Curtain Reveal 1) -->
+  <CinematicIntermission />
+
+  <!-- Bloco Inferior -->
+  <div class="lower-main content-block">
     <BonusSection />
     <ComparacaoOferta />
     <GarantiaSection />
     <Testimonials />
     <BioNey />
     <Faq />
-  </main>
+  </div>
+
+  <!-- Rodapé Cinematográfico (Curtain Reveal 2) -->
   <Footer />
 </Layout>
 
 <style>
-  /* Garante que o conteúdo principal cubra o footer fixo até o final do scroll */
-  .main-content {
+  /* Garante que os blocos de conteúdo cubram as seções fixas de parallax até o final do scroll */
+  .content-block {
     position: relative;
     z-index: 10;
     background-color: var(--color-bg-primary);
