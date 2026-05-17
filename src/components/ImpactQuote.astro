@@ -1,13 +1,13 @@
 ---
 ---
 <section class="impact-quote-section section-padding">
-  <div class="container">
-    <div class="quote-box relative flex flex-col items-center">
+  <div class="container mx-auto max-w-7xl px-6 xl:px-0">
+    <div class="quote-box relative flex flex-col border border-[rgba(0,217,255,0.4)] bg-[#02070D]/95 backdrop-blur-2xl rounded-[40px]">
       
       <!-- Dot Pattern SVG Background -->
       <svg
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 h-full w-full fill-slate-500/20"
+        class="pointer-events-none absolute inset-0 h-full w-full fill-slate-500/30 md:fill-slate-500/40 rounded-[40px]"
       >
         <defs>
           <pattern
@@ -19,34 +19,41 @@
             x="0"
             y="0"
           >
-            <circle cx="12" cy="12" r="1.5" />
+            <circle cx="3" cy="3" r="1.5" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" stroke-width="0" fill="url(#dot_pattern_quote)" />
       </svg>
 
-      <!-- 4 Glowing Corner Squares -->
-      <div class="corner-square top-left"></div>
-      <div class="corner-square top-right"></div>
-      <div class="corner-square bottom-left"></div>
-      <div class="corner-square bottom-right"></div>
+      <!-- 4 Solid Corner Squares -->
+      <div class="absolute -left-1.5 -top-1.5 h-3 w-3 bg-[#00D9FF] z-30"></div>
+      <div class="absolute -right-1.5 -top-1.5 h-3 w-3 bg-[#00D9FF] z-30"></div>
+      <div class="absolute -left-1.5 -bottom-1.5 h-3 w-3 bg-[#00D9FF] z-30"></div>
+      <div class="absolute -right-1.5 -bottom-1.5 h-3 w-3 bg-[#00D9FF] z-30"></div>
 
       <!-- Content -->
-      <div class="quote-content relative z-20 mx-auto max-w-5xl text-center py-12 md:py-20 px-6">
-        <p class="quote-badge">A FILOSOFIA NUTRIÇÃO AVANÇADA</p>
+      <div class="quote-content relative z-20 w-full mx-auto max-w-6xl py-12 md:p-16 xl:py-24 xl:px-20">
+        <p class="quote-badge text-xs md:text-sm lg:text-lg xl:text-2xl text-[#00D9FF] mb-8 font-medium tracking-wide text-left uppercase">
+          A Filosofia Nutrição Avançada
+        </p>
         
-        <div class="quote-massive">
-          <div class="quote-line">
-            <span class="font-semibold">"Menos</span>
-            <span class="font-thin">calculadora,</span>
+        <!-- Massive Typography (Sans-serif, Normal Case, High Contrast Weights) -->
+        <div class="quote-massive text-3xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter text-left">
+          <div class="flex flex-wrap gap-2 md:gap-3 lg:gap-4 items-baseline mb-2 md:mb-4">
+            <h1 class="font-semibold text-white">"O consultório deve ser</h1>
+            <p class="font-thin text-white">menos</p>
           </div>
-          <div class="quote-line">
-            <span class="font-thin">mais</span>
-            <span class="font-semibold highlight-cyan">nutricionista."</span>
+          <div class="flex flex-wrap gap-2 md:gap-3 lg:gap-4 items-baseline mb-2 md:mb-4">
+            <p class="font-thin text-white">calculadora</p>
+            <h1 class="font-semibold text-white">e muito</h1>
+            <p class="font-thin text-white">mais</p>
+          </div>
+          <div class="flex flex-wrap gap-2 md:gap-3 lg:gap-4 items-baseline mb-6 md:mb-12">
+            <h1 class="font-semibold highlight-cyan">nutricionista..."</h1>
           </div>
         </div>
 
-        <p class="quote-desc">
+        <p class="quote-desc text-left text-neutral-400 text-sm md:text-lg lg:text-xl max-w-4xl leading-relaxed font-light">
           Chega de passar horas calculando dietas em casa no pós-consulta. O método Nutrição Avançada devolve o seu tempo livre, a sua segurança clínica e o verdadeiro brilho dos seus atendimentos.
         </p>
       </div>
@@ -58,96 +65,41 @@
 <style>
   .impact-quote-section {
     position: relative;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     background: var(--color-bg-primary);
+    font-family: var(--font-main);
   }
 
   .quote-box {
-    border: 1px solid rgba(0, 217, 255, 0.3);
-    background: linear-gradient(145deg, rgba(6, 17, 29, 0.6) 0%, rgba(2, 7, 13, 0.8) 100%);
-    backdrop-filter: blur(28px);
-    border-radius: 32px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.1);
-    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), inset 0 1px 2px rgba(255, 255, 255, 0.1);
   }
 
-  /* 4 Glowing Corner Squares */
-  .corner-square {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: var(--color-accent-cyan);
-    box-shadow: 0 0 20px 4px var(--color-accent-cyan);
-    z-index: 30;
-  }
-
-  .top-left { top: -6px; left: -6px; }
-  .top-right { top: -6px; right: -6px; }
-  .bottom-left { bottom: -6px; left: -6px; }
-  .bottom-right { bottom: -6px; right: -6px; }
-
-  /* Content */
-  .quote-badge {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    letter-spacing: 0.25em;
-    color: var(--color-accent-cyan);
-    margin-bottom: 32px;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
+  /* Massive Typography */
   .quote-massive {
-    font-family: var(--font-heading);
-    font-size: 6.5rem;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--color-text-primary);
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    font-family: var(--font-main);
+    line-height: 1.1;
   }
 
-  .quote-line {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  .font-semibold { 
+    font-weight: 700; 
+    margin: 0;
   }
-
-  .font-semibold { font-weight: 700; }
-  .font-thin { font-weight: 300; opacity: 0.85; }
+  
+  .font-thin { 
+    font-weight: 200; 
+    opacity: 0.9;
+    margin: 0;
+  }
 
   .highlight-cyan {
     color: var(--color-accent-cyan);
-    text-shadow: 0 0 35px rgba(0, 217, 255, 0.4);
-  }
-
-  .quote-desc {
-    font-size: 1.35rem;
-    color: var(--color-text-muted);
-    max-width: 760px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-weight: 400;
-  }
-
-  @media (max-width: 992px) {
-    .quote-massive { font-size: 5rem; }
-    .quote-line { gap: 16px; }
+    text-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
   }
 
   @media (max-width: 768px) {
-    .quote-massive { font-size: 3.5rem; }
-    .quote-line { gap: 12px; }
-    .quote-desc { font-size: 1.15rem; }
-  }
-
-  @media (max-width: 576px) {
-    .quote-massive { font-size: 2.8rem; }
-    .quote-line { gap: 8px; }
-    .quote-badge { font-size: 1.05rem; }
+    .quote-content {
+      padding: 36px 28px;
+    }
   }
 </style>
