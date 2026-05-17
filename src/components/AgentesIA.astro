@@ -1,102 +1,267 @@
 ---
 const agentes = [
   { 
-    num: "#1", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>`,
-    title: "Agente Nutri Clínico", 
-    desc: "Seu assistente de I.A para dúvidas gerais de Nutrição e suporte com casos clínicos." 
+    id: 1,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/><path d="M12 8V4"/><path d="M8 4h8"/></svg>`,
+    title: "Story Cash", 
+    desc: "Crio Sequências de Stories que geram $$ para Nutricionistas",
+    tag: "Marketing",
+    iconBg: "#F3E8FF",
+    iconColor: "#A855F7",
+    fav: true
   },
   { 
-    num: "#2", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`, 
-    title: "Interpretador de Exames", 
-    desc: "Mande os exames dos pacientes e eu vou analisar para você e te ajudar a interpretar com precisão." 
+    id: 2,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>`,
+    title: "Novo: Nutri Avançado", 
+    desc: "Seu assistente de I.A avançado para dúvidas gerais de Nutrição e suporte com casos clínicos.",
+    tag: "Nutrição",
+    iconBg: "#FFEDD5",
+    iconColor: "#F97316",
+    fav: false
   },
   { 
-    num: "#3", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`, 
-    title: "Receitas Infinitas", 
-    desc: "Receitas baseadas na Metodologia STATUS FUNCIONAL™. Combino Lipídios Bioativos, Fitoquímicos e Probióticos para gerar, em segundos, receitas funcionais de verdade." 
+    id: 3,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`, 
+    title: "Assistente I.A", 
+    desc: "Assistente IA multifuncional para outros assuntos aleatórios do seu dia a dia que você precise",
+    tag: "AI Assistant",
+    iconBg: "#DBEAFE",
+    iconColor: "#3B82F6",
+    fav: false
   },
   { 
-    num: "#4", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`, 
-    title: "Agente Raio-X da Dieta", 
-    desc: "Cole o cardápio que você fez e receba uma análise fundamentada na biodisponibilidade dos nutrientes e encontre as carências nutricionais e pontos de melhoria da sua prescrição." 
+    id: 4,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`, 
+    title: "Exames 2.0", 
+    desc: "Especialista em análise e interpretação de exames laboratoriais com precisão clínica.",
+    tag: "Nutrição",
+    iconBg: "#F3E8FF",
+    iconColor: "#A855F7",
+    fav: true
   },
   { 
-    num: "#5", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>`, 
+    id: 5,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`, 
+    title: "Mentor de Recém Formados", 
+    desc: "Se formou agora e tá cheio de dúvidas? Vem cá que eu te ajudo a dar os primeiros passos com segurança!",
+    tag: "Marketing",
+    iconBg: "#DBEAFE",
+    iconColor: "#3B82F6",
+    fav: false
+  },
+  { 
+    id: 6,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15 3.3 3.3a1 1 0 0 0 1.4 0l7.7-7.7a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0l-7.7 7.7a1 1 0 0 0 0 1.4L15 12"/></svg>`, 
+    title: "Posicionamento", 
+    desc: "Construa seu posicionamento, oferta, bio, público alvo e marketing através de 7 etapas validadas.",
+    tag: "Marketing",
+    iconBg: "#F3E8FF",
+    iconColor: "#A855F7",
+    fav: false
+  },
+  { 
+    id: 7,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`, 
+    title: "Raio-X da Dieta", 
+    desc: "Cole o cardápio e receba uma análise fundamentada na biodisponibilidade dos nutrientes em segundos.",
+    tag: "Nutrição",
+    iconBg: "#FCE7F3",
+    iconColor: "#EC4899",
+    fav: false
+  },
+  { 
+    id: 8,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>`, 
     title: "Suplementação & Manipulados", 
-    desc: "Suplementos com base científica e manipulados exatos para a dieta e individualidade do seu paciente." 
-  },
-  { 
-    num: "#6", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`, 
-    title: "Mentor de Recém-Formados", 
-    desc: "Se formou agora e tá cheio de dúvidas? Vem cá que eu te ajudo a dar os primeiros passos com segurança!" 
-  },
-  { 
-    num: "#7", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15 3.3 3.3a1 1 0 0 0 1.4 0l7.7-7.7a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0l-7.7 7.7a1 1 0 0 0 0 1.4L15 12"/></svg>`, 
-    title: "Agente de Posicionamento", 
-    desc: "Chegou a hora de desvendar esse mistério chamado 'posicionamento' e criar o seu da forma correta. Esse agente vai te guiar através de 7 etapas a construir seu posicionamento, oferta, bio, público-alvo e marketing." 
-  },
-  { 
-    num: "#8", 
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><circle cx="12" cy="14" r="4"/><line x1="12" y1="6" x2="12.01" y2="6"/></svg>`, 
-    title: "Agente de Stories & Conteúdo", 
-    desc: "Cria roteiros magnéticos para seus stories e posts do Instagram, pensados para atrair pacientes particulares e gerar autoridade instantânea." 
+    desc: "Suplementos com base científica e manipulados exatos para a dieta e individualidade do seu paciente.",
+    tag: "Nutrição",
+    iconBg: "#DCFCE7",
+    iconColor: "#22C55E",
+    fav: false
   }
 ];
 ---
 <section class="ia-section section-padding" id="agentes-ia">
   <div class="container">
-    <div class="ia-wrapper glass-panel">
-      <div class="ia-header">
-        <div class="badge badge-gold">TECNOLOGIA EXCLUSIVA</div>
-        <h2 class="ia-title">TENHA 8 ESPECIALISTAS DE I.A. À SUA DISPOSIÇÃO</h2>
-        <p class="ia-subtitle">
-          Prontos para pensar, analisar e responder como quem vive o consultório. O único ecossistema de inteligência artificial do Brasil exclusivo para nutricionistas.
-        </p>
+    <div class="ia-header">
+      <div class="badge badge-gold">TECNOLOGIA EXCLUSIVA</div>
+      <h2 class="ia-title">TENHA 8 ESPECIALISTAS DE I.A. À SUA DISPOSIÇÃO</h2>
+      <p class="ia-subtitle">
+        Prontos para pensar, analisar e responder como quem vive o consultório. O único ecossistema de inteligência artificial do Brasil exclusivo para nutricionistas.
+      </p>
+    </div>
+
+    <!-- Mockup do Dashboard Nutri-Bots -->
+    <div class="dashboard-mockup">
+      <div class="mac-titlebar">
+        <div class="mac-buttons">
+          <span class="mac-btn close"></span>
+          <span class="mac-btn minimize"></span>
+          <span class="mac-btn expand"></span>
+        </div>
+        <div class="mac-title">app.nutribots.com/biblioteca</div>
       </div>
 
-      <div class="agentes-grid">
-        {agentes.map(item => (
-          <div class="agente-item glass-panel">
-            <div class="agente-header-box">
-              <span class="agente-num">{item.num}</span>
-              <div class="icon-box-premium" set:html={item.svg} />
-            </div>
-            <div class="agente-info">
-              <h4 class="agente-name">{item.title}</h4>
-              <p class="agente-desc">{item.desc}</p>
+      <div class="dashboard-window">
+        <!-- Top Navigation Bar (Blue) -->
+        <div class="dashboard-topbar">
+          <div class="topbar-left">
+            <span class="sidebar-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="9" x2="9" y1="3" y2="21"/></svg>
+            </span>
+            <div class="brand-logo">
+              <div class="brand-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6Z"/></svg>
+              </div>
+              <span class="brand-name">Nutri-Bots</span>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
 
-      <div class="prompts-box glass-panel">
-        <div class="icon-box-premium icon-box-gold">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect width="20" height="5" x="2" y="7" rx="1"/><line x1="12" x2="12" y1="22" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        <div class="dashboard-body">
+          <!-- Sidebar -->
+          <div class="dashboard-sidebar">
+            <div class="sidebar-menu">
+              <div class="menu-item active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/><path d="M12 8V4"/><path d="M8 4h8"/></svg>
+                <span>Agentes</span>
+              </div>
+              <div class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span>Prompts</span>
+              </div>
+
+              <div class="sidebar-btn-wrapper">
+                <button class="btn-new-chat">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Nova Conversa</span>
+                </button>
+              </div>
+
+              <div class="sidebar-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" placeholder="Buscar nas conversas..." readonly />
+              </div>
+
+              <div class="sidebar-section">
+                <div class="section-label">FAVORITOS</div>
+                <div class="sub-item"><span class="star-icon">⭐</span> Story Cash</div>
+                <div class="sub-item"><span class="star-icon">⭐</span> PBE: Interpretador de Evidên...</div>
+                <div class="sub-item"><span class="star-icon">⭐</span> Exames 2.0</div>
+              </div>
+
+              <div class="sidebar-section">
+                <div class="section-label">CONVERSAS</div>
+                <div class="section-sublabel">ÚLTIMOS 7 DIAS</div>
+                <div class="sub-item chat-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <span>stories para captar 3 paci...</span>
+                </div>
+                <div class="sub-item chat-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <span>Análise o hemograma do...</span>
+                </div>
+                <div class="sub-item chat-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <span>devo dar retorno nas min...</span>
+                </div>
+                <div class="sub-item chat-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <span>quero uma receita 3 ingr...</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-footer">
+              <div class="footer-item">
+                <div class="avatar-circle">D</div>
+                <span>Perfil</span>
+              </div>
+              <div class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                <span>Conquistas</span>
+              </div>
+              <div class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                <span>Novidades</span>
+              </div>
+              <div class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                <span>Admin</span>
+              </div>
+              <div class="footer-item logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+                <span>Sair</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Dashboard Area -->
+          <div class="dashboard-main">
+            <div class="main-header">
+              <h3 class="main-title">Biblioteca de Agentes</h3>
+              <p class="main-subtitle">Escolha um agente para iniciar uma conversa</p>
+            </div>
+
+            <div class="filter-bar">
+              <div class="search-box">
+                <input type="text" placeholder="Pesquisar agentes..." readonly />
+              </div>
+              <div class="filter-tabs">
+                <button class="filter-tab active">Todas</button>
+                <button class="filter-tab">Marketing</button>
+                <button class="filter-tab">Nutrição</button>
+                <button class="filter-tab">Favoritos</button>
+              </div>
+            </div>
+
+            <div class="bots-grid">
+              {agentes.map(bot => (
+                <div class="bot-card">
+                  <div class="bot-card-top">
+                    <div class="bot-icon-wrapper" style={`background-color: ${bot.iconBg}; color: ${bot.iconColor};`}>
+                      <div set:html={bot.svg} />
+                    </div>
+                    <span class={`heart-btn ${bot.fav ? 'fav' : ''}`}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill={bot.fav ? "#EF4444" : "none"} stroke={bot.fav ? "#EF4444" : "#9CA3AF"} stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </span>
+                  </div>
+
+                  <div class="bot-card-body">
+                    <h4 class="bot-title"><span class="star-icon">⭐</span> {bot.title}</h4>
+                    <p class="bot-desc">{bot.desc}</p>
+                    <span class="bot-tag">{bot.tag}</span>
+                  </div>
+
+                  <div class="bot-card-footer">
+                    <span class="start-chat-text">Iniciar conversa</span>
+                    <span class="start-chat-arrow">➔</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div class="prompts-content">
-          <h3 class="prompts-title">BÔNUS ESPECIAL: +50 PROMPTS DE ALTA CONVERSÃO E GESTÃO</h3>
-          <p class="prompts-desc">
-            Receba um acervo validado de prompts prontos para copiar e colar: Follow Up de pacientes, Prescrição Avançada, Marketing Ético, Contratos, Roteiros de Anamnese, Gestão de Consultório e Controle Financeiro.
-          </p>
-        </div>
+      </div>
+    </div>
+
+    <!-- Bônus Prompts -->
+    <div class="prompts-box glass-panel">
+      <div class="icon-box-premium icon-box-gold">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect width="20" height="5" x="2" y="7" rx="1"/><line x1="12" x2="12" y1="22" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      </div>
+      <div class="prompts-content">
+        <h3 class="prompts-title">BÔNUS ESPECIAL: +50 PROMPTS DE ALTA CONVERSÃO E GESTÃO</h3>
+        <p class="prompts-desc">
+          Receba um acervo validado de prompts prontos para copiar e colar: Follow Up de pacientes, Prescrição Avançada, Marketing Ético, Contratos, Roteiros de Anamnese, Gestão de Consultório e Controle Financeiro.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .ia-wrapper {
-    padding: 72px;
-    background: linear-gradient(135deg, rgba(10, 19, 37, 0.4), rgba(5, 11, 20, 0.6));
-    border-color: rgba(56, 189, 248, 0.2);
-  }
   .ia-header {
     text-align: center;
     max-width: 780px;
@@ -111,50 +276,443 @@ const agentes = [
     font-size: 1.2rem;
     color: var(--text-muted);
   }
-  .agentes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 56px;
+
+  /* --- MOCKUP DASHBOARD NUTRI-BOTS --- */
+  .dashboard-mockup {
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 64px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1F2937;
   }
-  .agente-item {
-    width: calc(25% - 18px);
-    min-width: 280px;
-    max-width: 400px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 32px;
-  }
-  .agente-item:hover {
-    border-color: rgba(56, 189, 248, 0.3) !important;
-  }
-  .agente-header-box {
+
+  /* Mac Titlebar */
+  .mac-titlebar {
+    background: #F3F4F6;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #E5E7EB;
   }
-  .agente-num {
+  .mac-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .mac-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .mac-btn.close { background: #EF4444; }
+  .mac-btn.minimize { background: #F59E0B; }
+  .mac-btn.expand { background: #10B981; }
+
+  .mac-title {
+    font-size: 0.85rem;
+    color: #6B7280;
+    font-weight: 500;
+    margin: 0 auto;
+    padding-right: 40px; /* balance buttons */
+  }
+
+  /* Dashboard Window */
+  .dashboard-window {
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+  }
+
+  /* Topbar */
+  .dashboard-topbar {
+    background: #0C4A8E; /* Azul escuro Nutri-Bots */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  .topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .sidebar-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+  }
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-icon {
+    width: 28px;
+    height: 28px;
+    background: #1B7DFF;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-name {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
-    color: var(--accent-gold);
-    background: rgba(250, 204, 21, 0.1);
-    padding: 4px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(250, 204, 21, 0.25);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
   }
-  .agente-name {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    color: var(--text-main);
+
+  /* Dashboard Body */
+  .dashboard-body {
+    display: flex;
+    min-height: 720px;
   }
-  .agente-desc {
+
+  /* Sidebar */
+  .dashboard-sidebar {
+    width: 260px;
+    background: #FFFFFF;
+    border-right: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px;
+    flex-shrink: 0;
+  }
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #4B5563;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .menu-item:hover {
+    background: #F3F4F6;
+    color: #1F2937;
+  }
+  .menu-item.active {
+    background: #EFF6FF;
+    color: #1B7DFF;
+    font-weight: 600;
+  }
+  .sidebar-btn-wrapper {
+    margin: 12px 0;
+  }
+  .btn-new-chat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    color: #1B7DFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+  }
+  .btn-new-chat:hover {
+    background: #EFF6FF;
+    border-color: #BFDBFE;
+  }
+  .sidebar-search {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9CA3AF;
+  }
+  .sidebar-search input {
+    width: 100%;
+    padding: 10px 10px 10px 36px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #6B7280;
+    outline: none;
+  }
+
+  .sidebar-section {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #9CA3AF;
+    letter-spacing: 0.5px;
+    padding-left: 6px;
+  }
+  .section-sublabel {
+    font-size: 0.7rem;
+    color: #D1D5DB;
+    padding-left: 6px;
+    margin-top: -4px;
+  }
+  .sub-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #4B5563;
+    cursor: pointer;
+  }
+  .sub-item:hover {
+    background: #F3F4F6;
+    color: #1F2937;
+  }
+  .star-icon {
+    font-size: 0.9rem;
+  }
+  .chat-item {
+    color: #6B7280;
+  }
+  .chat-item svg {
+    color: #9CA3AF;
+    flex-shrink: 0;
+  }
+  .chat-item span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Sidebar Footer */
+  .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 16px;
+  }
+  .footer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #4B5563;
+    cursor: pointer;
+  }
+  .footer-item:hover {
+    background: #F3F4F6;
+    color: #1F2937;
+  }
+  .footer-item.logout {
+    color: #EF4444;
+  }
+  .footer-item.logout:hover {
+    background: #FEF2F2;
+  }
+  .avatar-circle {
+    width: 24px;
+    height: 24px;
+    background: #1B7DFF;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
+  /* Main Dashboard Content */
+  .dashboard-main {
+    flex-grow: 1;
+    padding: 40px 48px;
+    background: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-header {
+    margin-bottom: 32px;
+  }
+  .main-title {
+    font-family: 'Playfair Display', var(--font-heading), serif;
+    font-size: 2.4rem;
+    color: #111827;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .main-subtitle {
     font-size: 1rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+    color: #6B7280;
   }
+
+  /* Filter Bar */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .search-box input {
+    width: 280px;
+    padding: 10px 16px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #4B5563;
+    outline: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .filter-tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .filter-tab {
+    padding: 8px 16px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #4B5563;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .filter-tab:hover {
+    background: #F3F4F6;
+    color: #1F2937;
+  }
+  .filter-tab.active {
+    background: #111827;
+    color: #FFFFFF;
+    border-color: #111827;
+    font-weight: 600;
+  }
+
+  /* Bots Grid */
+  .bots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .bot-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+  }
+  .bot-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -4px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    border-color: #BFDBFE;
+  }
+  .bot-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .bot-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .heart-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+
+  .bot-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+  .bot-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .bot-desc {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.5;
+  }
+  .bot-tag {
+    align-self: flex-start;
+    padding: 4px 10px;
+    background: #F3F4F6;
+    color: #4B5563;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .bot-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #F3F4F6;
+    color: #9CA3AF;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .bot-card:hover .bot-card-footer {
+    color: #1B7DFF;
+  }
+  .start-chat-arrow {
+    transition: transform 0.2s ease;
+  }
+  .bot-card:hover .start-chat-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Bônus Prompts */
   .prompts-box {
     display: flex;
     align-items: center;
@@ -172,30 +730,22 @@ const agentes = [
     color: var(--text-main);
     font-size: 1.05rem;
   }
-  @media (max-width: 1200px) {
-    .agente-item {
-      width: calc(33.333% - 16px);
+
+  @media (max-width: 1024px) {
+    .dashboard-sidebar {
+      display: none;
     }
-  }
-  @media (max-width: 900px) {
-    .agente-item {
-      width: calc(50% - 12px);
+    .dashboard-main {
+      padding: 32px;
     }
   }
   @media (max-width: 768px) {
-    .ia-wrapper {
-      padding: 36px 24px;
-    }
-    .ia-title {
-      font-size: 2.6rem;
-    }
-    .agente-item {
-      width: 100%;
-    }
-    .prompts-box {
-      flex-direction: column;
-      text-align: center;
-      padding: 28px;
-    }
+    .ia-title { font-size: 2.6rem; }
+    .dashboard-main { padding: 24px 16px; }
+    .bots-grid { grid-template-columns: 1fr; }
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .search-box input { width: 100%; }
+    .filter-tabs { overflow-x: auto; padding-bottom: 8px; }
+    .prompts-box { flex-direction: column; text-align: center; padding: 28px; }
   }
 </style>
