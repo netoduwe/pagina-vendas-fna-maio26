@@ -34,7 +34,7 @@ const agentes = [
     id: 4,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`, 
     title: "Exames 2.0", 
-    desc: "Especialista em análise e interpretação de exames laboratoriais com precisão clínica.",
+    desc: "Especialista em análise e interpretação de exames",
     tag: "Nutrição",
     iconBg: "#F3E8FF",
     iconColor: "#A855F7",
@@ -44,7 +44,7 @@ const agentes = [
     id: 5,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`, 
     title: "Mentor de Recém Formados", 
-    desc: "Se formou agora e tá cheio de dúvidas? Vem cá que eu te ajudo a dar os primeiros passos com segurança!",
+    desc: "Se formou agora e tá cheio de dúvidas? Vem cá que eu te ajudo!",
     tag: "Marketing",
     iconBg: "#DBEAFE",
     iconColor: "#3B82F6",
@@ -54,7 +54,7 @@ const agentes = [
     id: 6,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15 3.3 3.3a1 1 0 0 0 1.4 0l7.7-7.7a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0l-7.7 7.7a1 1 0 0 0 0 1.4L15 12"/></svg>`, 
     title: "Posicionamento", 
-    desc: "Construa seu posicionamento, oferta, bio, público alvo e marketing através de 7 etapas validadas.",
+    desc: "Construa seu posicionamento, oferta, bio, público alvo e marketing através de 7 etapas guiadas",
     tag: "Marketing",
     iconBg: "#F3E8FF",
     iconColor: "#A855F7",
@@ -62,22 +62,52 @@ const agentes = [
   },
   { 
     id: 7,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`, 
+    title: "RECEITAS INFINITAS 2.0", 
+    desc: "[Em testes] Receitas Baseadas na Metodologia STATUS FUNCIONAL™. > Combino Lipídios Bioativos, Fitoquímicos e Probióticos para gerar, em segundos, receitas funcionais de verdade.",
+    tag: "Nutrição",
+    iconBg: "#FEF3C7",
+    iconColor: "#D97706",
+    fav: false
+  },
+  { 
+    id: 8,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>`, 
+    title: "Suplementos e Manipulados 2.0", 
+    desc: "Suplementos e Manipulados para a dieta do seu paciente.",
+    tag: "AI Assistant",
+    iconBg: "#DCFCE7",
+    iconColor: "#22C55E",
+    fav: false
+  },
+  { 
+    id: 9,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`, 
-    title: "Raio-X da Dieta", 
-    desc: "Cole o cardápio e receba uma análise fundamentada na biodisponibilidade dos nutrientes em segundos.",
+    title: "Raio-x da Dieta", 
+    desc: "Cole o cardápio que você fez e encontre as carências de micronutrientes da dieta.",
     tag: "Nutrição",
     iconBg: "#FCE7F3",
     iconColor: "#EC4899",
     fav: false
   },
   { 
-    id: 8,
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>`, 
-    title: "Suplementação & Manipulados", 
-    desc: "Suplementos com base científica e manipulados exatos para a dieta e individualidade do seu paciente.",
+    id: 10,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`, 
+    title: "PBE: Interpretador de Evidências", 
+    desc: "Te ajudo a interpretar evidências",
     tag: "Nutrição",
-    iconBg: "#DCFCE7",
-    iconColor: "#22C55E",
+    iconBg: "#E0E7FF",
+    iconColor: "#6366F1",
+    fav: true
+  },
+  { 
+    id: 11,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><circle cx="12" cy="14" r="4"/><line x1="12" y1="6" x2="12.01" y2="6"/></svg>`, 
+    title: "Gerador de Conteúdos [2.0]", 
+    desc: "Te ajudo com conteúdo para o instagram",
+    tag: "Marketing",
+    iconBg: "#FFEDD5",
+    iconColor: "#F97316",
     fav: false
   }
 ];
@@ -86,7 +116,7 @@ const agentes = [
   <div class="container">
     <div class="ia-header">
       <div class="badge badge-gold">TECNOLOGIA EXCLUSIVA</div>
-      <h2 class="ia-title">TENHA 8 ESPECIALISTAS DE I.A. À SUA DISPOSIÇÃO</h2>
+      <h2 class="ia-title">TENHA 11 ESPECIALISTAS DE I.A. À SUA DISPOSIÇÃO</h2>
       <p class="ia-subtitle">
         Prontos para pensar, analisar e responder como quem vive o consultório. O único ecossistema de inteligência artificial do Brasil exclusivo para nutricionistas.
       </p>
