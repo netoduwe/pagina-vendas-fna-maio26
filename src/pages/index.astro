@@ -16,7 +16,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Formação Nutrição Avançada (FNA T8) • Ney Felipe">
-  <main>
+  <main class="main-content">
     <Hero />
     <ProblemaSolucao />
     <Metodologia />
@@ -29,6 +29,17 @@ import Footer from '../components/Footer.astro';
     <Testimonials />
     <BioNey />
     <Faq />
-    <Footer />
   </main>
+  <Footer />
 </Layout>
+
+<style>
+  /* Garante que o conteúdo principal cubra o footer fixo até o final do scroll */
+  .main-content {
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-bg-primary);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+</style>
