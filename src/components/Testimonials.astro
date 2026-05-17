@@ -4,19 +4,19 @@ const depoimentos = [
   {
     type: "video",
     title: "Fernanda Folle • Nutri há 12 anos",
-    videoUrl: "https://www.youtube-nocookie.com/embed/K1O_x_HiYIo?rel=0&modestbranding=1",
+    videoUrl: "https://www.youtube.com/embed/K1O_x_HiYIo?rel=0&modestbranding=1&playsinline=1",
     desc: "\"Encontrei na Formação um caminho prático para viver de consultório de forma leve e com total segurança nas prescrições.\""
   },
   {
     type: "video",
     title: "Adriana Guedes • Nutri há 17 anos",
-    videoUrl: "https://www.youtube-nocookie.com/embed/I3q8K-Shdas?rel=0&modestbranding=1",
+    videoUrl: "https://www.youtube.com/embed/I3q8K-Shdas?rel=0&modestbranding=1&playsinline=1",
     desc: "\"Nenhuma pós-graduação que fiz na vida entrega tudo que a Formação Nutrição Avançada entregou. Incrível.\""
   },
   {
     type: "video",
     title: "Melissa Pinesso • Nutri & Aluna",
-    videoUrl: "https://www.youtube-nocookie.com/embed/Zhi-YzQCIw8?rel=0&modestbranding=1",
+    videoUrl: "https://www.youtube.com/embed/Zhi-YzQCIw8?rel=0&modestbranding=1&playsinline=1",
     desc: "\"Nos primeiros atendimentos após o curso pude me notar menos 'calculadora' e mais nutricionista, dando um novo significado e brilho nas minhas consultas.\""
   },
 
@@ -43,7 +43,7 @@ const depoimentos = [
     text: "Tinha uma dificuldade para trabalhar com emagrecimento porque os pacientes não retornavam, eu aplicava tudo que tinha aprendido na faculdade, mas isso não gerava resultados. Hoje meus pacientes indicam meu trabalho."
   },
 
-  // =========== PRINTS REAIS ===========
+  // =========== PRINTS REAIS (SEM CORTES) ===========
   {
     type: "print",
     title: "Nutricionista Recém-Formada",
@@ -179,7 +179,7 @@ const depoimentos = [
               {item.type === 'video' && (
                 <>
                   <div class="slide-video-wrapper">
-                    <iframe src={item.videoUrl} title={item.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <iframe src={item.videoUrl} title={item.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
                   </div>
                   <div class="slide-content">
                     <h4 class="slide-title">{item.title}</h4>
@@ -218,7 +218,7 @@ const depoimentos = [
               {item.type === 'video' && (
                 <>
                   <div class="slide-video-wrapper">
-                    <iframe src={item.videoUrl} title={item.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <iframe src={item.videoUrl} title={item.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
                   </div>
                   <div class="slide-content">
                     <h4 class="slide-title">{item.title}</h4>
@@ -499,29 +499,31 @@ const depoimentos = [
     text-align: left;
   }
 
-  /* =========== TIPO 3: PRINTS REAIS =========== */
+  /* =========== TIPO 3: PRINTS REAIS (SEM CORTES) =========== */
   .slide-img-wrapper {
     width: 100%;
-    height: 340px;
+    height: 400px; /* Altura ampliada para prints longos */
     background: #02070D;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     position: relative;
+    padding: 16px; /* Respiro interno para o print não tocar nas bordas */
   }
 
   .slide-img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain; /* Garante que 100% do print seja visível sem NENHUM corte */
+    object-position: center;
     display: block;
     transition: transform 0.5s ease;
+    border-radius: 12px;
   }
 
   .testimonial-card:hover .slide-img-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 
   .slide-content {

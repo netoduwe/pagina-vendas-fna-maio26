@@ -1,3 +1,14 @@
+# Carrossel de Depoimentos para Elementor
+
+Este arquivo contém o código HTML/CSS/JS completo, isolado e otimizado para ser copiado e colado diretamente no widget **HTML Code** do Elementor.
+
+## Correções Aplicadas nesta Versão:
+1. **Vídeos do YouTube Corrigidos**: Trocado para o domínio principal `youtube.com`, adicionado o parâmetro `playsinline=1`, as permissões completas no `allow` e a política `referrerpolicy="strict-origin-when-cross-origin"` para evitar o erro de bloqueio de reprodução.
+2. **Prints 100% Visíveis (Sem Cortes)**: Ajustado o contêiner de imagens para `height: 400px` com `object-fit: contain` e `padding: 16px`. Isso garante que prints longos de WhatsApp ou Instagram apareçam inteiros, sem cortar cabeçalho ou rodapé.
+
+---
+
+```html
 <div class="elementor-custom-carousel-wrapper">
   <!-- Container Principal do Carrossel -->
   <div class="carousel-container" id="custom-depo-carousel">
@@ -572,3 +583,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+```
