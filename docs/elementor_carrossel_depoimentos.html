@@ -4,34 +4,84 @@
     
     <!-- Track de Slides -->
     <div class="carousel-track" id="depo-track">
+      
       <!-- Slide 1 -->
       <div class="carousel-slide">
-        <img src="https://nutrineyfelipe.com/wp-content/uploads/2025/03/formacao-nutricao-avancada-resultados-depoimentos-joao.2.jpg" alt="Depoimento João Marcelo" loading="lazy" />
+        <div class="slide-img-wrapper">
+          <img src="https://nutrineyfelipe.com/wp-content/uploads/2025/03/formacao-nutricao-avancada-resultados-depoimentos-joao.2.jpg" alt="Depoimento João Marcelo" loading="lazy" />
+        </div>
+        <div class="slide-content">
+          <h4 class="slide-title">João Marcelo • Aluno FNA</h4>
+          <p class="slide-desc">Superou a insegurança clínica com casos complexos (SOP) e fechou acompanhamento trimestral à vista no Pix.</p>
+        </div>
       </div>
+
       <!-- Slide 2 -->
       <div class="carousel-slide">
-        <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/print-pacote-1k.jpg" alt="Depoimento Pacote 1k" loading="lazy" />
+        <div class="slide-img-wrapper">
+          <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/print-pacote-1k.jpg" alt="Depoimento Pacote 1k" loading="lazy" />
+        </div>
+        <div class="slide-content">
+          <h4 class="slide-title">Aluna FNA • Consultório</h4>
+          <p class="slide-desc">Fechou seu primeiro pacote de acompanhamento de R$ 1.000,00 aplicando a estrutura de valor da Formação.</p>
+        </div>
       </div>
+
       <!-- Slide 3 -->
       <div class="carousel-slide">
-        <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-nutricao.jpg" alt="Depoimento Curso Nutrição" loading="lazy" />
+        <div class="slide-img-wrapper">
+          <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-nutricao.jpg" alt="Depoimento Curso Nutrição" loading="lazy" />
+        </div>
+        <div class="slide-content">
+          <h4 class="slide-title">Nutricionista Recém-Formada</h4>
+          <p class="slide-desc">Formada no final de 2023, eliminou o medo de atender e recuperou todo o investimento da Formação rapidamente.</p>
+        </div>
       </div>
+
       <!-- Slide 4 -->
       <div class="carousel-slide">
-        <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-dieta-na-hora.jpg" alt="Depoimento Dieta na Hora" loading="lazy" />
+        <div class="slide-img-wrapper">
+          <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-dieta-na-hora.jpg" alt="Depoimento Dieta na Hora" loading="lazy" />
+        </div>
+        <div class="slide-content">
+          <h4 class="slide-title">Aluna FNA • Prática Clínica</h4>
+          <p class="slide-desc">Ganhou agilidade e segurança para entregar o plano alimentar na hora, encantando e fidelizando pacientes.</p>
+        </div>
       </div>
+
       <!-- Slide 5 -->
       <div class="carousel-slide">
-        <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-01.png" alt="Depoimento Berty Song" loading="lazy" />
+        <div class="slide-img-wrapper">
+          <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-01.png" alt="Depoimento Berty Song" loading="lazy" />
+        </div>
+        <div class="slide-content">
+          <h4 class="slide-title">Berty Song • Recém-Formada</h4>
+          <p class="slide-desc">Transformou a insegurança do início de carreira em uma agenda cheia de pacientes e muito mais tempo livre.</p>
+        </div>
       </div>
+
       <!-- Slide 6 -->
       <div class="carousel-slide">
-        <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-02.png" alt="Depoimento Nair Cristina" loading="lazy" />
+        <div class="slide-img-wrapper">
+          <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-02.png" alt="Depoimento Nair Cristina" loading="lazy" />
+        </div>
+        <div class="slide-content">
+          <h4 class="slide-title">Nair Cristina • Nutri há 4 anos</h4>
+          <p class="slide-desc">Alcançou clareza absoluta para conduzir pacientes em todas as fases do tratamento com total segurança clínica.</p>
+        </div>
       </div>
+
       <!-- Slide 7 -->
       <div class="carousel-slide">
-        <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-03.png" alt="Depoimento Nathalia Pantaleão" loading="lazy" />
+        <div class="slide-img-wrapper">
+          <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-03.png" alt="Depoimento Nathalia Pantaleão" loading="lazy" />
+        </div>
+        <div class="slide-content">
+          <h4 class="slide-title">Nathalia Pantaleão • Nutri há 3 anos</h4>
+          <p class="slide-desc">Ultrapassou as barreiras do emagrecimento sem retorno. Hoje seus pacientes têm resultados reais e indicam seu trabalho.</p>
+        </div>
       </div>
+
     </div>
 
     <!-- Botões de Navegação Desktop -->
@@ -68,13 +118,13 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 28px;
   }
 
   /* Track com Scroll Snap nativo (Instagram Style) */
   .carousel-track {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -94,41 +144,83 @@
     cursor: grabbing;
   }
 
-  /* Slides */
+  /* Slides (Cards com Imagem + Descrição) */
   .carousel-slide {
     scroll-snap-align: center;
     flex-shrink: 0;
-    width: 320px;
-    max-width: 82vw;
-    border-radius: 20px;
+    width: 350px;
+    max-width: 85vw;
+    border-radius: 24px;
     overflow: hidden;
     background: #06111D;
-    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
   }
 
   .carousel-slide:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     border-color: rgba(0, 217, 255, 0.4);
+    box-shadow: 0 20px 40px -10px rgba(0, 217, 255, 0.2);
   }
 
-  .carousel-slide img {
+  .slide-img-wrapper {
     width: 100%;
-    height: auto;
-    max-height: 520px;
-    object-fit: contain;
+    height: 340px;
+    background: #02070D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slide-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
     display: block;
-    border-radius: 18px;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-slide:hover .slide-img-wrapper img {
+    transform: scale(1.05);
+  }
+
+  .slide-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .slide-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #00D9FF;
+    margin: 0;
+    letter-spacing: -0.3px;
+  }
+
+  .slide-desc {
+    font-size: 0.95rem;
+    color: #E2E8F0;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
   }
 
   /* Botões de Navegação Desktop */
   .carousel-nav {
     position: absolute;
-    top: 50%;
+    top: 170px; /* Alinhado ao centro da imagem */
     transform: translateY(-50%);
     width: 48px;
     height: 48px;
@@ -184,7 +276,9 @@
   /* Oculta setas no Mobile (onde o touch swipe é nativo) */
   @media (max-width: 768px) {
     .carousel-nav { display: none; }
-    .carousel-slide { width: 280px; }
+    .carousel-slide { width: 300px; }
+    .slide-img-wrapper { height: 300px; }
+    .slide-content { padding: 20px; }
   }
 </style>
 
@@ -242,12 +336,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Botões Prev / Next
   prevBtn.addEventListener("click", () => {
-    const slideWidth = slides[0].clientWidth + 20;
+    const slideWidth = slides[0].clientWidth + 24;
     track.scrollBy({ left: -slideWidth, behavior: "smooth" });
   });
 
   nextBtn.addEventListener("click", () => {
-    const slideWidth = slides[0].clientWidth + 20;
+    const slideWidth = slides[0].clientWidth + 24;
     track.scrollBy({ left: slideWidth, behavior: "smooth" });
   });
 
