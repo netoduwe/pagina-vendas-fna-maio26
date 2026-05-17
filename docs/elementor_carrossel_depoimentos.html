@@ -1,0 +1,284 @@
+<div class="elementor-custom-carousel-wrapper">
+  <!-- Container Principal do Carrossel -->
+  <div class="carousel-container" id="custom-depo-carousel">
+    
+    <!-- Track de Slides -->
+    <div class="carousel-track" id="depo-track">
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+        <img src="https://nutrineyfelipe.com/wp-content/uploads/2025/03/formacao-nutricao-avancada-resultados-depoimentos-joao.2.jpg" alt="Depoimento João Marcelo" loading="lazy" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/print-pacote-1k.jpg" alt="Depoimento Pacote 1k" loading="lazy" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-nutricao.jpg" alt="Depoimento Curso Nutrição" loading="lazy" />
+      </div>
+      <!-- Slide 4 -->
+      <div class="carousel-slide">
+        <img src="https://nutrineyfelipe.com/wp-content/uploads/2024/09/curso-dieta-na-hora.jpg" alt="Depoimento Dieta na Hora" loading="lazy" />
+      </div>
+      <!-- Slide 5 -->
+      <div class="carousel-slide">
+        <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-01.png" alt="Depoimento Berty Song" loading="lazy" />
+      </div>
+      <!-- Slide 6 -->
+      <div class="carousel-slide">
+        <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-02.png" alt="Depoimento Nair Cristina" loading="lazy" />
+      </div>
+      <!-- Slide 7 -->
+      <div class="carousel-slide">
+        <img src="https://nutrineyfelipe.com/wp-content/uploads/2023/09/depo-03.png" alt="Depoimento Nathalia Pantaleão" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- Botões de Navegação Desktop -->
+    <button class="carousel-nav nav-prev" id="nav-prev-btn" aria-label="Anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button class="carousel-nav nav-next" id="nav-next-btn" aria-label="Próximo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+
+  </div>
+
+  <!-- Indicadores / Dots -->
+  <div class="carousel-dots" id="depo-dots"></div>
+</div>
+
+<style>
+  /* Isolamento e Container */
+  .elementor-custom-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .elementor-custom-carousel-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  /* Track com Scroll Snap nativo (Instagram Style) */
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 16px;
+    scrollbar-width: none; /* Firefox */
+    cursor: grab;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .carousel-track.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+    cursor: grabbing;
+  }
+
+  /* Slides */
+  .carousel-slide {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 320px;
+    max-width: 82vw;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #06111D;
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-slide:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 217, 255, 0.4);
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    display: block;
+    border-radius: 18px;
+  }
+
+  /* Botões de Navegação Desktop */
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(2, 7, 13, 0.85);
+    border: 1px solid rgba(0, 217, 255, 0.4);
+    color: #00D9FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .carousel-nav:hover {
+    background: #00D9FF;
+    color: #02070D;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .nav-prev { left: 16px; }
+  .nav-next { right: 16px; }
+
+  /* Indicadores / Dots */
+  .carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .carousel-dot.active {
+    width: 28px;
+    border-radius: 100px;
+    background: #00D9FF;
+    box-shadow: 0 0 12px rgba(0, 217, 255, 0.6);
+  }
+
+  /* Oculta setas no Mobile (onde o touch swipe é nativo) */
+  @media (max-width: 768px) {
+    .carousel-nav { display: none; }
+    .carousel-slide { width: 280px; }
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.getElementById("depo-track");
+  const prevBtn = document.getElementById("nav-prev-btn");
+  const nextBtn = document.getElementById("nav-next-btn");
+  const dotsContainer = document.getElementById("depo-dots");
+  const slides = Array.from(track.querySelectorAll(".carousel-slide"));
+
+  if (!track || slides.length === 0) return;
+
+  // Cria os Dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.classList.add("carousel-dot");
+    dot.setAttribute("aria-label", `Slide ${index + 1}`);
+    if (index === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsContainer.querySelectorAll(".carousel-dot"));
+
+  // Navegação para Slide específico
+  function goToSlide(index) {
+    if (index < 0 || index >= slides.length) return;
+    const slide = slides[index];
+    const trackRect = track.getBoundingClientRect();
+    const slideRect = slide.getBoundingClientRect();
+    const scrollPos = slide.offsetLeft - (track.clientWidth / 2) + (slide.clientWidth / 2);
+    track.scrollTo({ left: scrollPos, behavior: "smooth" });
+  }
+
+  // Atualiza Dot Ativo no Scroll
+  track.addEventListener("scroll", () => {
+    const scrollCenter = track.scrollLeft + track.clientWidth / 2;
+    let closestIndex = 0;
+    let minDistance = Infinity;
+
+    slides.forEach((slide, index) => {
+      const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+      const distance = Math.abs(scrollCenter - slideCenter);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === closestIndex);
+    });
+  });
+
+  // Botões Prev / Next
+  prevBtn.addEventListener("click", () => {
+    const slideWidth = slides[0].clientWidth + 20;
+    track.scrollBy({ left: -slideWidth, behavior: "smooth" });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    const slideWidth = slides[0].clientWidth + 20;
+    track.scrollBy({ left: slideWidth, behavior: "smooth" });
+  });
+
+  // Mouse Drag para Desktop
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  track.addEventListener("mousedown", (e) => {
+    isDown = true;
+    track.classList.add("dragging");
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+  });
+
+  track.addEventListener("mouseleave", () => {
+    isDown = false;
+    track.classList.remove("dragging");
+  });
+
+  track.addEventListener("mouseup", () => {
+    isDown = false;
+    track.classList.remove("dragging");
+  });
+
+  track.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    const walk = (x - startX) * 2; // Velocidade do arrasto
+    track.scrollLeft = scrollLeft - walk;
+  });
+});
+</script>
