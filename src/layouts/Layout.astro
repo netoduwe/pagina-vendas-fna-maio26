@@ -18,21 +18,13 @@ const { title, description = "Formação Nutrição Avançada (FNA T8) com Ney F
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
 
-    <!-- Meta Pixel Code -->
-    <script is:inline>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1615234125717646');
-      fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1615234125717646&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WLK7CPF');</script>
+    <!-- End Google Tag Manager -->
 
     <!-- Chatbase -->
     <script is:inline>
@@ -43,8 +35,17 @@ const { title, description = "Formação Nutrição Avançada (FNA T8) com Ney F
     </script>
     <script is:inline src="https://www.chatbase.co/embed.min.js" chatbotId="r-XQvK3KqZ4oK7P9wL2uM" domain="www.chatbase.co" defer></script>
     <!-- End Chatbase -->
-  </head>
+    <!-- FullFunnels CRM External Tracking -->
+<script 
+  src=https://link.fullfunnel.app/js/external-tracking.js
+  data-tracking-id=tk_a52ff809e17541c682ff56f9a86e1d66>
+</script>
+</head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLK7CPF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <slot />
   </body>
 </html>
